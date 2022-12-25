@@ -14,9 +14,26 @@ section {
     text-fill-color: transparent;
 }
 
+
+
+.quat{
+    color: #07C5D1;
+    position: relative;
+    top: -5px;
+    left: -4px;
+}
+
+@media (min-width: 600px) {
+    .devvsakib{
+        font-size: 120px;
+    }
+}
 @media (max-width: 820px) {
     .devvsakib{
-        font-size: 20vw;
+        font-size: 80px;
+    }
+    .intro{
+        width: 500px;
     }
 }
 @media (max-width: 532px) {
@@ -30,12 +47,4 @@ section {
         margin-top: 20px;
         padding: 0 10vw;
     }
-}
-
-
-.quat{
-    color: #07C5D1;
-    position: relative;
-    top: -5px;
-    left: -4px;
 }
