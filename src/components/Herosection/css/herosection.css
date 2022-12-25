@@ -1,0 +1,39 @@
+section {
+  margin-top: 20px;
+  padding: 0 10vw;
+}
+
+.devvsakib {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 180px;
+  background: linear-gradient(84.41deg, #851EED 21.84%, #07C5D1 83.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@media (max-width: 820px) {
+  .devvsakib {
+    font-size: 20vw;
+  }
+}
+@media (max-width: 532px) {
+  .devvsakib {
+    font-size: 13vw;
+  }
+  .intro {
+    font-size: 12px;
+  }
+  section {
+    margin-top: 20px;
+    padding: 0 10vw;
+  }
+}
+.quat {
+  color: #07C5D1;
+  position: relative;
+  top: -5px;
+  left: -4px;
+}/*# sourceMappingURL=herosection.css.map */

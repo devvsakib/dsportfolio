@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Tauri&family=Teko:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #AD30FA;
+    --secondary-color: #07C5D1;
+    --background-color: #01041E;
+    --circle-color: rgba(74, 8, 125, 0.36);
+    --text-background: linear-gradient(84.41deg, #851EED 21.84%, #07C5D1 83.77%);
+    --brackets-color: #FFF506;
+    --equal-color: #E02AAD;
+    --para-color: #AD62F8;
+
+
+    --font-size: 28px;
+    --title-size: 180px;
+    --font-weight: normal;
+    --font-family: 'Tauri', 'Raleway', sans-serif;
+    --title-font: 'Teko', 'Raleway', sans-serif;
+}
+
+.hamburger {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+        z-index: 77;
+    }
+}

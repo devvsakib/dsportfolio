@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-family: tauri;
+}
+img{
+  max-width: 100%;
+}
+
+header{
+  padding: 20px 7vw;
+}
+div{
+  background-color: var(--background-color);
+
+}

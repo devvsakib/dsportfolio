@@ -1,0 +1,21 @@
+.logo img {
+  width: 180px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    background-color: var(--background-color);
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 60px;
+    z-index: 999;
+    height: 100vh;
+  }
+  .navitem {
+    text-align: left;
+    width: 120px !important;
+  }
+}/*# sourceMappingURL=header.css.map */
