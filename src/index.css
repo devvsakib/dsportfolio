@@ -5,6 +5,7 @@ body{
   background-color: var(--background-color);
   color: var(--primary-color);
   font-family: tauri;
+  overflow-x: hidden;
 }
 img{
   max-width: 100%;

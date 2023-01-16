@@ -5,8 +5,9 @@ section {
 
 .devvsakib {
     font-family: var(--title-font);
+        z-index: 99;
     font-weight: 400;
-    font-size: 180px;
+    font-size: 12rem !important;
     background: linear-gradient(84.41deg, #851EED 21.84%, #07C5D1 83.77%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -14,8 +15,30 @@ section {
     text-fill-color: transparent;
 }
 
-
-
+.circle{
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    top: 10rem;
+    left: -14rem;
+    z-index: 1;
+    opacity: 0.3;
+    border-radius: 50%;
+    filter: blur(10rem);
+    background: linear-gradient(84.41deg, #851EED 60.84%, #07C5D1 83.77%);
+}
+.c2{
+    background: #AD30FA !important;
+    top: 1rem !important;
+    left: 60rem;
+    z-index: 0;
+}
+.c3{
+    background: #07C5D1 !important;
+    top: -12rem;
+    left: 48%;
+    z-index: 0;
+}
 .quat{
     color: #07C5D1;
     position: relative;
