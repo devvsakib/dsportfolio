@@ -6,7 +6,7 @@ const HeroSection = () => {
             <div className="circle"></div>
             <div className="circle c2"></div>
             <div className="circle c3"></div>
-            <section className='z-99'>
+            <section className='z-99 hero-sec'>
                 <div className='lg:w-[1200px] w-auto mx-auto'>
                     <div className='text-[#AD30FA]'><span className='text-[#FFF506]'>{'{'}</span>{'function()'}<span className='text-[#FFF506]'>{'{'}</span>
                         <div className='sm:pl-[5rem] pl-4 sm:py-10 py-3'>

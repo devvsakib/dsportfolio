@@ -56,15 +56,21 @@ section {
 }
 @media (max-width: 820px) {
   .devvsakib {
-    font-size: 80px;
+    font-size: 80px !important;
   }
   .intro {
     width: 500px;
   }
 }
 @media (max-width: 532px) {
+  .hero-sec {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .devvsakib {
-    font-size: 13vw;
+    font-size: 13vw !important;
   }
   .intro {
     font-size: 12px;
