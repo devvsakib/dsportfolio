@@ -1,9 +1,14 @@
+header{
+    z-index: 9999;
+    div{
+        background: transparent !important;
+    }
+}
 .logo{
     img{
         width: 180px;
     }
 }
-
 @media (max-width: 768px) {
     .nav{
         background-color: #851eed57;

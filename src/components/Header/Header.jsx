@@ -28,19 +28,19 @@ const Header = () => {
     }, [screenSize]);
 
     return (
-        <header className='flex justify-between items-center relative '>
+        <header className='flex z- justify-between items-center relative '>
             <div className="logo">
-                <img src="assets/Logo.png" alt="" srcset="" />
+                <img src="assets/Logo.png" alt="" srcSet="" />
             </div>
 
             <div
-                className={`nav transition delay-150 ease-in-out ${menuActive ? "" : "hidden"} `}
+                className={`nav  transition delay-150 ease-in-out ${menuActive ? "" : "hidden"} `}
             >
                 <button
                     className="text-3xl text-white md:hidden mb-4"
                     onClick={() => setMenuActive(!menuActive)}
                 >
-                    <CloseIcon className="text-white" />
+                    <CloseIcon className="text-white font-bold" />
                 </button>
                 <div className="flex list-none flex-col items-center justify-center gap-[2rem] md:flex-row md:gap-[0.6rem] menu">
                     {navElement.map((e, key) => (

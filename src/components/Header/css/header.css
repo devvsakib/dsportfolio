@@ -1,3 +1,10 @@
+header {
+  z-index: 9999;
+}
+header div {
+  background: transparent !important;
+}
+
 .logo img {
   width: 180px;
 }
