@@ -63,6 +63,19 @@ section {
   }
 }
 @media (max-width: 532px) {
+  .c3 {
+    display: none;
+  }
+  .c2 {
+    background: #AD30FA !important;
+    top: -5rem !important;
+    left: 12rem;
+    z-index: 0;
+    overflow: hidden;
+    width: 10rem;
+    height: 10rem;
+    opacity: 1 !important;
+  }
   .hero-sec {
     height: 100vh;
     display: flex;

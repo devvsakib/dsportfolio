@@ -5,7 +5,7 @@ section {
 
 .devvsakib {
     font-family: var(--title-font);
-        z-index: 99;
+    z-index: 99;
     font-weight: 400;
     font-size: 12rem !important;
     background: linear-gradient(84.41deg, #851EED 21.84%, #07C5D1 83.77%);
@@ -15,7 +15,7 @@ section {
     text-fill-color: transparent;
 }
 
-.circle{
+.circle {
     width: 30rem;
     height: 30rem;
     position: absolute;
@@ -27,19 +27,22 @@ section {
     filter: blur(10rem);
     background: linear-gradient(84.41deg, #851EED 60.84%, #07C5D1 83.77%);
 }
-.c2{
+
+.c2 {
     background: #AD30FA !important;
     top: 1rem !important;
     left: 60rem;
     z-index: 0;
 }
-.c3{
+
+.c3 {
     background: #07C5D1 !important;
     top: -12rem;
     left: 48%;
     z-index: 0;
 }
-.quat{
+
+.quat {
     color: #07C5D1;
     position: relative;
     top: -5px;
@@ -47,31 +50,52 @@ section {
 }
 
 @media (min-width: 600px) {
-    .devvsakib{
+    .devvsakib {
         font-size: 120px;
     }
 }
+
 @media (max-width: 820px) {
-    .devvsakib{
+    .devvsakib {
         font-size: 80px !important;
     }
-    .intro{
+
+    .intro {
         width: 500px;
     }
 }
+
 @media (max-width: 532px) {
-    .hero-sec{
+    .c3 {
+        display: none;
+    }
+
+    .c2 {
+        background: #AD30FA !important;
+        top: -5rem !important;
+        left: 12rem;
+        z-index: 0;
+        overflow: hidden;
+        width: 10rem;
+        height: 10rem;
+        opacity: 1 !important;
+    }
+
+    .hero-sec {
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .devvsakib{
+
+    .devvsakib {
         font-size: 13vw !important;
     }
-    .intro{
+
+    .intro {
         font-size: 12px;
     }
+
     section {
         margin-top: 20px;
         padding: 0 10vw;

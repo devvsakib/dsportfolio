@@ -11,9 +11,11 @@ const HeroSection = () => {
                     <div className='text-[#AD30FA]'><span className='text-[#FFF506]'>{'{'}</span>{'function()'}<span className='text-[#FFF506]'>{'{'}</span>
                         <div className='sm:pl-[5rem] pl-4 sm:py-10 py-3'>
                             <table className='table-auto'>
-                                <tr><td><span className='text-[#07C5D1]'>greeting</span></td> <td><span className='text-[#E02AAD] mx-6'>=</span></td> <td><span className='text-[#A026FF]'><span className='quat'>"</span>Hi! Im<span className='quat'> "</span></span></td></tr>
-                                <tr><td><span className='text-[#07C5D1]'>name</span></td> <td><span className='text-[#E02AAD] mx-6'>=</span></td> <td><span className='devvsakib'>"DevvSakib"</span></td></tr>
-                                <tr><td><span className='text-[#07C5D1]'>intro</span></td> <td><span className='text-[#E02AAD] mx-6'>=</span></td> <td><span className='text-[#AD62F8] intro'><span className='quat'>"</span>I’m a Frontend Developer. Learning is the key of success. I design and build neat,<br /> clean modern website. <span className='quat'> "</span></span></td></tr>
+                                <tbody>
+                                    <tr><td><span className='text-[#07C5D1]'>greeting</span></td> <td><span className='text-[#E02AAD] mx-6'>=</span></td> <td><span className='text-[#A026FF]'><span className='quat'>"</span>Hi! Im<span className='quat'> "</span></span></td></tr>
+                                    <tr><td><span className='text-[#07C5D1]'>name</span></td> <td><span className='text-[#E02AAD] mx-6'>=</span></td> <td><span className='devvsakib'>"DevvSakib"</span></td></tr>
+                                    <tr><td><span className='text-[#07C5D1]'>intro</span></td> <td><span className='text-[#E02AAD] mx-6'>=</span></td> <td><span className='text-[#AD62F8] intro'><span className='quat'>"</span>I’m a Frontend Developer and WordPress Expert. Learning is the key of success. I design and build neat,<br /> clean modern website. <span className='quat'> "</span></span></td></tr>
+                                </tbody>
                             </table>
                         </div>
                         <span className='text-[#FFF506]'>{'})()'}</span></div>

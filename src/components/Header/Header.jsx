@@ -42,7 +42,7 @@ const Header = () => {
                 >
                     <CloseIcon className="text-white" />
                 </button>
-                <div className="flex list-none flex-col items-center justify-center gap-[2rem] md:flex-row md:gap-[0.6rem]">
+                <div className="flex list-none flex-col items-center justify-center gap-[2rem] md:flex-row md:gap-[0.6rem] menu">
                     {navElement.map((e, key) => (
                         <Link to={e.link} key={key} className="navitem ml-4"
                         >

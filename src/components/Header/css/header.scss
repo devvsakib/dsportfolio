@@ -6,7 +6,8 @@
 
 @media (max-width: 768px) {
     .nav{
-        background-color: var(--bac);
+        background-color: #851eed57;
+        backdrop-filter: blur(5px);
         position: absolute;
         right: 0;
         top: 0;
@@ -14,11 +15,15 @@
         padding-left: 20px;
         padding-right: 60px;
         z-index: 999;
-        height: 100vh;
+        height: 100vh !important;
+    }
+    .menu{
+        background: transparent;
     }
     .navitem{
         text-align: left;
-        width: 120px !important;
+        width: 50vw !important;
+        padding: .2rem;
     }
  
 }
