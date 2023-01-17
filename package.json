@@ -1,7 +1,8 @@
 {
-  "name": "tst",
+  "name": "devvsakib",
   "private": true,
   "version": "0.0.0",
+  "author": "devvsakib",
   "type": "module",
   "scripts": {
     "dev": "vite",

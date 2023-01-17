@@ -1,0 +1,45 @@
+{
+    "projects": [
+        {
+            "name": "DevvSakib",
+            "title": "Tesla Clone",
+            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
+            "description": "Webite under construction",
+            "link": "https://github.com/devvsakib/devvsakib",
+            "live_link": "https://devvsakib.github.io/devvsakib",
+            "stack": [
+                "React",
+                "Styled Components",
+                "CSS"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Portfolio",
+            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
+            "description": "Webite under construction",
+            "link": "https://github.com/devvsakib/devvsakib",
+            "live_link": "https://devvsakib.github.io/devvsakib",
+            "stack": [
+                "React",
+                "Tailwind",
+                "Sass",
+                "Vite"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Portfolio",
+            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
+            "description": "Webite under construction",
+            "link": "https://github.com/devvsakib/devvsakib",
+            "live_link": "https://devvsakib.github.io/devvsakib",
+            "stack": [
+                "React",
+                "Tailwind",
+                "Sass",
+                "Vite"
+            ]
+        }
+    ]
+}

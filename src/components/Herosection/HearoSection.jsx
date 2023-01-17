@@ -20,7 +20,7 @@ const HeroSection = () => {
                         </div>
                         <span className='text-[#FFF506]'>{'})()'}</span></div>
                 </div>
-                <div className='flex flex-col md:flex-row w-[80vw] lg:w-[80vw] sm:justify-center items-center mx-auto sm:h-auto h-[300px] justify-evenly '>
+                {/* <div className='flex flex-col md:flex-row w-[80vw] lg:w-[80vw] sm:justify-center items-center mx-auto sm:h-auto h-[300px] justify-evenly '>
 
                     <p className='text-4xl relative left-[-100px] opacity-30'>href="/</p>
                     <div className="button1 sm:pr-3" >
@@ -35,7 +35,7 @@ const HeroSection = () => {
                     </div>
                     <p className='text-4xl relative right-[-100px] opacity-30'>"</p>
 
-                </div>
+                </div> */}
             </section>
         </>
     )
