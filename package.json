@@ -5,7 +5,7 @@
   "author": "devvsakib",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -15,6 +15,7 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.4",
     "@mui/styled-engine": "^5.11.0",
+    "framer-motion": "^8.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
