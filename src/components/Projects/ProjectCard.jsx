@@ -57,8 +57,14 @@ const ProjectCard = ({ project }) => {
                     }
                 </div>
                 <div className="bg-transparent">
-                    <a href="#" className="project-card__link">Live</a>
-                    <a href="#" className="project-card__link">Code</a>
+                    <motion.button
+                        whileTap={{ scale: 0.6 }}
+
+                        href="#" className="project-card__link p-2 mb-0">Live</motion.button>
+                    <motion.button
+                        whileTap={{ scale: 0.6 }}
+
+                        href="#" className="project-card__link p-2 mb-0">Code</motion.button>
                 </div>
             </div>
         </motion.div>
