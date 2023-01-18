@@ -2,43 +2,85 @@
     "projects": [
         {
             "name": "DevvSakib",
+            "title": "Portfolio",
+            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
+            "description": "Webite under construction",
+            "link": "https://github.com/devvsakib/devvsakib",
+            "live_link": "https://devvsakib.github.io/devvsakib",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/sass.png",
+                "https://img.icons8.com/color/512/javascript.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Portfolio",
+            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
+            "description": "Webite under construction",
+            "link": "https://github.com/devvsakib/devvsakib",
+            "live_link": "https://devvsakib.github.io/devvsakib",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/sass.png",
+                "https://img.icons8.com/color/512/javascript.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Portfolio",
+            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
+            "description": "Webite under construction",
+            "link": "https://github.com/devvsakib/devvsakib",
+            "live_link": "https://devvsakib.github.io/devvsakib",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/sass.png",
+                "https://img.icons8.com/color/512/javascript.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Portfolio",
+            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
+            "description": "Webite under construction",
+            "link": "https://github.com/devvsakib/devvsakib",
+            "live_link": "https://devvsakib.github.io/devvsakib",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/sass.png",
+                "https://img.icons8.com/color/512/javascript.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Portfolio",
+            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
+            "description": "Webite under construction",
+            "link": "https://github.com/devvsakib/devvsakib",
+            "live_link": "https://devvsakib.github.io/devvsakib",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/sass.png",
+                "https://img.icons8.com/color/512/javascript.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
             "title": "Tesla Clone",
             "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
             "description": "Webite under construction",
             "link": "https://github.com/devvsakib/devvsakib",
             "live_link": "https://devvsakib.github.io/devvsakib",
             "stack": [
-                "React",
+                "https://img.icons8.com/office/512/react.png",
                 "Styled Components",
                 "CSS"
-            ]
-        },
-        {
-            "name": "DevvSakib",
-            "title": "Portfolio",
-            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
-            "description": "Webite under construction",
-            "link": "https://github.com/devvsakib/devvsakib",
-            "live_link": "https://devvsakib.github.io/devvsakib",
-            "stack": [
-                "React",
-                "Tailwind",
-                "Sass",
-                "Vite"
-            ]
-        },
-        {
-            "name": "DevvSakib",
-            "title": "Portfolio",
-            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
-            "description": "Webite under construction",
-            "link": "https://github.com/devvsakib/devvsakib",
-            "live_link": "https://devvsakib.github.io/devvsakib",
-            "stack": [
-                "React",
-                "Tailwind",
-                "Sass",
-                "Vite"
             ]
         }
     ]

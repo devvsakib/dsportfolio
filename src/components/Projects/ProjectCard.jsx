@@ -30,10 +30,31 @@ const ProjectCard = ({ project }) => {
             <div className="project-card__content bg-transparent">
                 <h2 className="text-2xl mt-3">{project.title}</h2>
                 <p className="text-sm">{project.description}</p>
-                <div className={`grid grid-flow-col gap-2  my-2 bg-transparent w-auto `}>
+                <div className={`grid grid-flow-col gap-4 justify-start  my-2 bg-transparent w-auto `}>
                     {
                         project.stack.map((tech, idx) => (
-                            <span key={idx} className=" bg-[#07C5D1] text-[#01041E] px-2 w-auto rounded text-sm"> {tech}</span>
+                            <motion.img
+                            whileHover={{ scale: 1.5 }}
+                            key={idx}
+                            src={tech} srcSet=''
+                             className='w-6 cursor-pointer'/>
+                            // <motion.span
+                            // initial={{
+                            //     opacity: 0,
+                            //     x: 0,
+                            //     y: 50,
+                            //     scale: 1,
+                            //     rotate: 1,
+                            // }}
+                            // animate={{
+                            //     opacity: 1,
+                            //     x: 0,
+                            //     y: 0,
+                            //     scale: 1,
+                            //     rotate: 0,
+                            // }}
+                            // whileHover={{ scale: 1.2 }}
+                            // key={idx} className=" bg-[#07C5D1] text-[#01041E] cursor-pointer px-2 w-auto rounded text-sm"> {tech}</motion.span>
                         ))
                     }
                 </div>
