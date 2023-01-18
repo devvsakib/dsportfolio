@@ -1,25 +1,6 @@
 import { motion } from 'framer-motion';
 const ProjectCard = ({ project }) => {
     // console.log(project);
-    const container = {
-        hidden: { opacity: 1, scale: 0 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                delayChildren: 0.3,
-                staggerChildren: 0.2
-            }
-        }
-    }
-
-    const item = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1
-        }
-    }
 
     return (
         <motion.div
@@ -42,17 +23,17 @@ const ProjectCard = ({ project }) => {
                 delay: 0.2,
                 ease: [0, 0.71, 0.2, 1.01]
             }}
-            className="project-card p-3 z-10 rounded-md bg-[#AD30FA]/20 shadow-md backdrop-blur-md backdrop-brightness-100 drop-shadow-2xl shadow-[#AD30FA]/40">
+            className="project-card w-[100%] p-3 z-10 rounded-md bg-[#AD30FA]/20 shadow-md backdrop-blur-md backdrop-brightness-100 drop-shadow-2xl shadow-[#AD30FA]/40">
             <div className="project-card__image rounded-md overflow-hidden">
                 <img src={project.thumb} alt="" srcSet="" className="object-fit object-cover object-center" />
             </div>
             <div className="project-card__content bg-transparent">
                 <h2 className="text-2xl mt-3">{project.title}</h2>
                 <p className="text-sm">{project.description}</p>
-                <div className="flex gap-2 my-2 bg-transparent">
+                <div className={`grid grid-flow-col gap-2  my-2 bg-transparent w-auto `}>
                     {
                         project.stack.map((tech, idx) => (
-                            <span key={idx} className="bg-[#07C5D1] text-[#01041E] px-3 rounded text-sm"> {tech}</span>
+                            <span key={idx} className=" bg-[#07C5D1] text-[#01041E] px-2 w-auto rounded text-sm"> {tech}</span>
                         ))
                     }
                 </div>
