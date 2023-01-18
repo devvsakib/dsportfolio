@@ -79,8 +79,9 @@
             "live_link": "https://devvsakib.github.io/devvsakib",
             "stack": [
                 "https://img.icons8.com/office/512/react.png",
-                "Styled Components",
-                "CSS"
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/sass.png",
+                "https://img.icons8.com/color/512/javascript.png"
             ]
         }
     ]
