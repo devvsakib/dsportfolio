@@ -28,7 +28,7 @@ const Header = () => {
     }, [screenSize]);
 
     return (
-        <header className='flex z-99999 justify-between items-center relative '>
+        <header className='flex z-99999 justify-between items-center relative p-0 py-5'>
             <div className="logo">
                 <Link to="/">
                 <img src="assets/Logo.png" alt="" srcSet="" />
