@@ -49,19 +49,22 @@ section {
     left: -4px;
 }
 
-@media (min-width: 600px) {
-    .devvsakib {
-        font-size: 120px;
-    }
-}
-
 @media (max-width: 960px) {
     .devvsakib {
         font-size: 80px !important;
     }
 
     .intro {
-        width: 500px;
+        // display: block;
+        // text-align: justify;
+        width: 400px;
+    }
+}
+
+
+@media (min-width: 600px) {
+    .devvsakib {
+        font-size: 120px;
     }
 }
 
@@ -82,7 +85,6 @@ section {
     }
 
     .hero-sec {
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
