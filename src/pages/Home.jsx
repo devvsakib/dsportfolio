@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroSection from '../components/Herosection/HearoSection'
+import Layout from '../components/Layout'
 
 const Home = () => {
     return (
