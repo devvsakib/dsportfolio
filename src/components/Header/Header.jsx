@@ -30,7 +30,9 @@ const Header = () => {
     return (
         <header className='flex z-99999 justify-between items-center relative '>
             <div className="logo">
+                <Link to="/">
                 <img src="assets/Logo.png" alt="" srcSet="" />
+                </Link>
             </div>
 
             <div

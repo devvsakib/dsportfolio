@@ -25,6 +25,8 @@ const ProjectCard = ({ project }) => {
             }}
             className="project-card w-[100%] p-3 z-10 rounded-md bg-[#AD30FA]/20 shadow-md backdrop-blur-md backdrop-brightness-100 drop-shadow-2xl shadow-[#AD30FA]/40">
             <div className="grid grid-flow-col gap-2 items-center project-card__image rounded-md bg-transparent overflow-hidden">
+                {/* vertical stack icon */}
+                
                 <div className={`grid w-auto bg-transparent  gap-4  justify-start  my-2`}>
                     {
                         project.stack.map((tech, idx) => (
@@ -58,6 +60,7 @@ const ProjectCard = ({ project }) => {
             <div className="project-card__content bg-transparent">
                 <h2 className="text-2xl mt-3">{project.title}</h2>
                 <p className="text-sm">{project.description}</p>
+                {/* horizontal stack icon */}
                 {/* <div className={`grid grid-flow-col gap-4 justify-start  my-2 bg-transparent w-auto `}>
                     {
                         project.stack.map((tech, idx) => (
