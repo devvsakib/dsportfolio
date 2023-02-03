@@ -4,7 +4,7 @@ import GetProjects from '../components/Projects/GetProjects'
 const Projects = () => {
     
     return (
-        <section className='grid z-999 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-5 gap-10 bg-gradient-to-r'>
+        <section className='grid z-999 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-5 gap-10 bg-gradient-to-r px-0'>
             <GetProjects />
             {/* <ProjectBG /> */}
         </section>
