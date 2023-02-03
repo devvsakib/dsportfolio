@@ -24,9 +24,9 @@ const ProjectCard = ({ project }) => {
                 ease: [0, 0.71, 0.2, 1.01]
             }}
             className="project-card w-[100%] p-3 z-10 rounded-md bg-[#AD30FA]/20 shadow-md backdrop-blur-md backdrop-brightness-100 drop-shadow-2xl shadow-[#AD30FA]/40">
-            <div className="grid grid-flow-col gap-2 items-center project-card__image rounded-md bg-transparent overflow-hidden">
+            <div className="z-99999 grid grid-flow-col gap-2 items-center project-card__image rounded-md bg-transparent overflow-hidden z-10">
                 {/* vertical stack icon */}
-                
+
                 <div className={`grid w-auto bg-transparent  gap-4  justify-start  my-2`}>
                     {
                         project.stack.map((tech, idx) => (
@@ -58,8 +58,8 @@ const ProjectCard = ({ project }) => {
                 <img src={project.thumb} alt="" srcSet="" className="object-fit object-cover object-center" />
             </div>
             <div className="project-card__content bg-transparent">
-                <h2 className="text-2xl mt-3">{project.title}</h2>
-                <p className="text-sm">{project.description}</p>
+                <h2 className="text-2xl mt-3 text-white">{project.title}</h2>
+                <p className="text-sm text-white">{project.description}</p>
                 {/* horizontal stack icon */}
                 {/* <div className={`grid grid-flow-col gap-4 justify-start  my-2 bg-transparent w-auto `}>
                     {
@@ -93,11 +93,11 @@ const ProjectCard = ({ project }) => {
                     <motion.button
                         whileTap={{ scale: 0.6 }}
 
-                        href="#" className="project-card__link p-2 mb-0">Live</motion.button>
+                        href="#" className="text-white project-card__link p-2 mb-0">Live</motion.button>
                     <motion.button
                         whileTap={{ scale: 0.6 }}
 
-                        href="#" className="project-card__link p-2 mb-0">Code</motion.button>
+                        href="#" className="text-white project-card__link p-2 mb-0">Code</motion.button>
                 </div>
             </div>
         </motion.div>
