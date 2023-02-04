@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
+import './styles/style.css'
 
 const ProjectCard = ({ project }) => {
     return (
@@ -56,7 +57,7 @@ const ProjectCard = ({ project }) => {
                     }
                     </div>
                 </div>
-                <img src={project.thumb} alt="" srcSet="" className="object-fit object-cover object-center" />
+                <img src={project.thumb} alt="" srcSet="" className="object-fit skeleton object-cover object-center" />
             </div>
             <div className="project-card__content bg-transparent">
                 <h2 className="text-2xl mt-3 text-white">{project.title}</h2>
