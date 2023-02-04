@@ -9,8 +9,8 @@ const ProjectCard = ({ project }) => {
                 opacity: 0,
                 x: 0,
                 y: 50,
-                scale: 1,
-                rotate: 1,
+                scale: 0.9,
+                rotate: 2
             }}
             animate={{
                 opacity: 1,
@@ -20,9 +20,9 @@ const ProjectCard = ({ project }) => {
                 rotate: 0,
             }}
             transition={{
-                duration: 0.5,
+                duration: 1,
                 delay: 0.2,
-                ease: [0, 0.71, 0.2, 1.01]
+                ease: [.5, 0.71, .7, 1.2]
             }}
             className="project-card w-[100%] p-3 z-10 rounded-md bg-[#AD30FA]/20 shadow-md backdrop-blur-md backdrop-brightness-100 drop-shadow-2xl shadow-[#AD30FA]/40">
             <div className="z-99999 grid grid-flow-col gap-2 rounded-md bg-transparent overflow-hidden z-10 items-start">
