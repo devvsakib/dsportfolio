@@ -10,7 +10,7 @@
     background-color: hsla(199deg, 72%, 59%, 0.315);
   }
   100% {
-    background-color: hsl(293deg, 94%, 57%);
+    background-color: hsla(293deg, 94%, 57%, 0.7);
   }
 }
 
@@ -19,6 +19,6 @@
     background-color: hsla(199deg, 72%, 59%, 0.315);
   }
   100% {
-    background-color: hsl(293deg, 94%, 57%);
+    background-color: hsla(293deg, 94%, 57%, 0.7);
   }
 }/*# sourceMappingURL=style.css.map */
