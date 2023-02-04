@@ -2,11 +2,11 @@
     "projects": [
         {
             "name": "DevvSakib",
-            "title": "Portfolio",
-            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
-            "description": "Webite under construction",
-            "link": "https://github.com/devvsakib/devvsakib",
-            "live_link": "https://devvsakib.github.io/devvsakib",
+            "title": "PowerTheWeb",
+            "thumb": "/assets/powertheweb.png",
+            "description": "An opensource project to help people to power their skill and knowledge with vast projects and resources.",
+            "link": "https://github.com/devvsakib/power-the-web",
+            "live_link": "https://ptwa.vercel.app",
             "stack": [
                 "https://img.icons8.com/office/512/react.png",
                 "https://img.icons8.com/color/512/tailwindcss.png",
@@ -16,56 +16,14 @@
         },
         {
             "name": "DevvSakib",
-            "title": "Portfolio",
-            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
-            "description": "Webite under construction",
-            "link": "https://github.com/devvsakib/devvsakib",
-            "live_link": "https://devvsakib.github.io/devvsakib",
+            "title": "Hyer",
+            "thumb": "/assets/hyerclone.png",
+            "description": "An award winning website clone using pure HTML, CSS and JS.",
+            "link": "https://github.com/devvsakib/plane-booking-website",
+            "live_link": "https://plane-booking-website.vercel.app",
             "stack": [
-                "https://img.icons8.com/office/512/react.png",
-                "https://img.icons8.com/color/512/tailwindcss.png",
-                "https://img.icons8.com/color/512/sass.png",
-                "https://img.icons8.com/color/512/javascript.png"
-            ]
-        },
-        {
-            "name": "DevvSakib",
-            "title": "Portfolio",
-            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
-            "description": "Webite under construction",
-            "link": "https://github.com/devvsakib/devvsakib",
-            "live_link": "https://devvsakib.github.io/devvsakib",
-            "stack": [
-                "https://img.icons8.com/office/512/react.png",
-                "https://img.icons8.com/color/512/tailwindcss.png",
-                "https://img.icons8.com/color/512/sass.png",
-                "https://img.icons8.com/color/512/javascript.png"
-            ]
-        },
-        {
-            "name": "DevvSakib",
-            "title": "Portfolio",
-            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
-            "description": "Webite under construction",
-            "link": "https://github.com/devvsakib/devvsakib",
-            "live_link": "https://devvsakib.github.io/devvsakib",
-            "stack": [
-                "https://img.icons8.com/office/512/react.png",
-                "https://img.icons8.com/color/512/tailwindcss.png",
-                "https://img.icons8.com/color/512/sass.png",
-                "https://img.icons8.com/color/512/javascript.png"
-            ]
-        },
-        {
-            "name": "DevvSakib",
-            "title": "Portfolio",
-            "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
-            "description": "Webite under construction",
-            "link": "https://github.com/devvsakib/devvsakib",
-            "live_link": "https://devvsakib.github.io/devvsakib",
-            "stack": [
-                "https://img.icons8.com/office/512/react.png",
-                "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/html-5.png",
+                "https://img.icons8.com/color/512/css3.png",
                 "https://img.icons8.com/color/512/sass.png",
                 "https://img.icons8.com/color/512/javascript.png"
             ]
@@ -74,14 +32,51 @@
             "name": "DevvSakib",
             "title": "Tesla Clone",
             "thumb": "https://raw.githubusercontent.com/devvsakib/random-image-for-thumbnail/main/tesla.png",
-            "description": "Webite under construction",
-            "link": "https://github.com/devvsakib/devvsakib",
-            "live_link": "https://devvsakib.github.io/devvsakib",
+            "description": "Tesla website clone. Using React, Styled Components and Framer Motion",
+            "link": "https://github.com/devvsakib/tesla-clone",
+            "live_link": "https://tesla-clone-devvsakib.vercel.app",
             "stack": [
                 "https://img.icons8.com/office/512/react.png",
                 "https://img.icons8.com/color/512/tailwindcss.png",
                 "https://img.icons8.com/color/512/sass.png",
                 "https://img.icons8.com/color/512/javascript.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Developer Portfolio",
+            "thumb": "/assets/developerportfolio.png",
+            "description": "Developer Portfolio website. Using HTML, CSS and JS",
+            "link": "https://github.com/devvsakib/developer-portfolio",
+            "live_link": "https://devvsakib.github.io/developer-portfolio/",
+            "stack": [
+                "https://img.icons8.com/color/512/html-5.png",
+                "https://img.icons8.com/color/512/css3.png",
+                "https://img.icons8.com/color/512/javascript.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Legal Solutions",
+            "thumb": "/assets/justiceweb.png",
+            "description": "Legal Solutions website. Using HTML and Tailwind CSS",
+            "link": "https://github.com/devvsakib/devvsakib",
+            "live_link": "https://legalsolutionsph.netlify.app/https://devvsakib.github.io/devvsakib",
+            "stack": [
+                "https://img.icons8.com/color/512/html-5.png",
+                "https://img.icons8.com/color/512/tailwindcss.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Tea House",
+            "thumb": "/assets/teahouse.png",
+            "description": "Simple website for a tea house. Using HTML and Tailwind CSS",
+            "link": "https://github.com/devvsakib/devvsakib",
+            "live_link": "https://teahousep3.netlify.app",
+            "stack": [
+                "https://img.icons8.com/color/512/html-5.png",
+                "https://img.icons8.com/color/512/tailwindcss.png"
             ]
         }
     ]
