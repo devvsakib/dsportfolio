@@ -69,6 +69,19 @@
         },
         {
             "name": "DevvSakib",
+            "title": "JavaScript Calculator",
+            "thumb": "/assets/calculator.png",
+            "description": "Developer Portfolio website. Using HTML, CSS and JS",
+            "link": "https://github.com/devvsakib/simpleJsCalc",
+            "live_link": "https://devvsakib.github.io/simpleJsCalc",
+            "stack": [
+                "https://img.icons8.com/color/512/html-5.png",
+                "https://img.icons8.com/color/512/css3.png",
+                "https://img.icons8.com/color/512/javascript.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
             "title": "Legal Solutions",
             "thumb": "/assets/justiceweb.png",
             "description": "Legal Solutions website. Using HTML and Tailwind CSS",
