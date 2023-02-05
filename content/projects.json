@@ -4,14 +4,27 @@
             "name": "DevvSakib",
             "title": "PowerTheWeb",
             "thumb": "/assets/powertheweb.png",
-            "description": "An opensource project to help people to power their skill and knowledge with vast projects and resources.",
+            "description": "An opensource project to help people with vast projects and resources.",
             "link": "https://github.com/devvsakib/power-the-web",
             "live_link": "https://ptwa.vercel.app",
             "stack": [
                 "https://img.icons8.com/office/512/react.png",
                 "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/sass.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "GitHub Error Solve",
+            "thumb": "/assets/ges.png",
+            "description": "An opensource project to help people to solve their GitHub error.",
+            "link": "https://github.com/devvsakib/github-error-solve",
+            "live_link": "https://github-error-solve.vercel.app",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
                 "https://img.icons8.com/color/512/sass.png",
-                "https://img.icons8.com/color/512/javascript.png"
+                "/assets/vite.svg"
             ]
         },
         {
@@ -38,8 +51,7 @@
             "stack": [
                 "https://img.icons8.com/office/512/react.png",
                 "https://img.icons8.com/color/512/tailwindcss.png",
-                "https://img.icons8.com/color/512/sass.png",
-                "https://img.icons8.com/color/512/javascript.png"
+                "https://img.icons8.com/color/512/sass.png"
             ]
         },
         {
