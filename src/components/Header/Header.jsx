@@ -47,6 +47,7 @@ const Header = () => {
                 <div className="flex list-none flex-col items-center justify-center gap-[2rem] md:flex-row md:gap-[0.6rem] menu">
                     {navElement.map((e, key) => (
                         <Link to={e.link} key={key} className="navitem ml-4 hover:text-[#07C5D1] transition-colors delay-75 ease-in-out"
+                        onClick={()=>setMenuActive(!menuActive)}
                         >
                             {e.name}
                         </Link>
