@@ -56,6 +56,19 @@
         },
         {
             "name": "DevvSakib",
+            "title": "To-Do Web App",
+            "thumb": "/assets/todoapp.png",
+            "description": "A simple To-Do app. User can add, delete and update their task. All data saved in localStorage.",
+            "link": "#",
+            "live_link": "https://todotaskwebapp.netlify.app/",
+            "stack": [
+                "https://img.icons8.com/color/512/html-5.png",
+                "https://img.icons8.com/color/512/css3.png",
+                "https://img.icons8.com/color/512/javascript.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
             "title": "Developer Portfolio",
             "thumb": "/assets/developerportfolio.png",
             "description": "Developer Portfolio website. Using HTML, CSS and JS",

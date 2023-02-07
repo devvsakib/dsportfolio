@@ -5,6 +5,10 @@
   height: 100%;
 }
 
+.thumbnail {
+  width: 100vw;
+}
+
 @-webkit-keyframes skeleton {
   0% {
     background-color: hsla(199deg, 72%, 59%, 0.315);
