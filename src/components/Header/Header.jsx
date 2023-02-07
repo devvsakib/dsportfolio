@@ -31,7 +31,7 @@ const Header = () => {
         <header className='flex z-99999 justify-between items-center relative p-0 py-5'>
             <div className="logo">
                 <Link to="/">
-                <img src="assets/Logo.png" alt="" srcSet="" />
+                    <img src="assets/Logo.png" alt="" srcSet="" />
                 </Link>
             </div>
 
@@ -47,9 +47,19 @@ const Header = () => {
                 <div className="flex list-none flex-col items-center justify-center gap-[2rem] md:flex-row md:gap-[0.6rem] menu">
                     {navElement.map((e, key) => (
                         <Link to={e.link} key={key} className="navitem ml-4 hover:text-[#07C5D1] transition-colors delay-75 ease-in-out"
-                        onClick={()=>setMenuActive(!menuActive)}
                         >
-                            {e.name}
+                            {
+                                screenSize < 768 ? (
+                                    <p
+                                        onClick={() => setMenuActive(!menuActive)}
+                                    >
+                                        {e.name}
+                                    </p>
+                                ) : (
+                                    e.name
+                                )
+                            }
+
                         </Link>
                     ))}
                 </div>
