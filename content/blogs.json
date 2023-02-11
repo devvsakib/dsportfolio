@@ -1,0 +1,34 @@
+{
+    "blogs": [
+        {
+            "title": "How to use the new Google Maps API",
+            "url": "http://www.google.com",
+            "content": "This is a test blog post for the Google Maps API. Please ignore this post and do not use it for anything.",
+            "thumbnail": "/assets/MainProfilePicture2.png"
+        },
+        {
+            "title": "How to use the new Google Maps API",
+            "url": "http://www.google.com",
+            "content": "This is a test blog post for the Google Maps API. Please ignore this post and do not use it for anything.",
+            "thumbnail": "https://img.wattpad.com/39a8daa7a9e8c9581064520c7c1821809e3cf88e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f5f745a4c5855772d575330372d413d3d2d3639343839313431372e313538326634353532623336313435613631343838393039303738322e6a7067?s=fit&w=720&h=720"
+        },
+        {
+            "title": "How to use the new Google Maps API",
+            "url": "http://www.google.com",
+            "content": "This is a test blog post for the Google Maps API. Please ignore this post and do not use it for anything.",
+            "thumbnail": "/assets/MainProfilePicture2.png"
+        },
+        {
+            "title": "How to use the new Google Maps API",
+            "url": "http://www.google.com",
+            "content": "This is a test blog post for the Google Maps API. Please ignore this post and do not use it for anything.",
+            "thumbnail": "https://img.wattpad.com/39a8daa7a9e8c9581064520c7c1821809e3cf88e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f5f745a4c5855772d575330372d413d3d2d3639343839313431372e313538326634353532623336313435613631343838393039303738322e6a7067?s=fit&w=720&h=720"
+        },
+        {
+            "title":"How to use the new Google Maps API",
+            "url":"http://www.google.com",
+            "content":"This is a test blog post for the Google Maps API. Please ignore this post and do not use it for anything.",
+            "thumbnail": "/assets/MainProfilePicture2.png"
+        }
+    ]
+}
