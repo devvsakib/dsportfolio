@@ -49,17 +49,19 @@ section {
   left: -4px;
 }
 
-@media (max-width: 960px) {
+@media (min-width: 532px) {
   .devvsakib {
-    font-size: 80px !important;
-  }
-  .intro {
-    width: 400px;
+    font-size: 90px !important;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .devvsakib {
-    font-size: 120px;
+    font-size: 13vw !important;
+  }
+}
+@media (min-width: 1040px) {
+  .devvsakib {
+    font-size: 13rem !important;
   }
 }
 @media (max-width: 532px) {
