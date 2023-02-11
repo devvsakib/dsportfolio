@@ -1,8 +1,27 @@
-import React from 'react'
 import { blogs } from "/content/blogs.json";
+import { motion } from 'framer-motion';
 const BlogCard = () => {
     return (
-        <div className='grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10'>
+        <motion.div
+            initial={{
+                opacity: 0,
+                x: 0,
+                y: 50,
+                scale: 0.9,
+                rotate: 0
+            }}
+            animate={{
+                opacity: 1,
+                x: 0,
+                y: 0,
+                scale: 1,
+                rotate: 0,
+            }}
+            transition={{
+                duration: .8,
+                delay: 0.2,
+                ease: [.5, 0.71, .7, 1.2]
+            }} className='grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 bg-transparent'>
             {
                 blogs.map(blog => (
 
@@ -25,7 +44,7 @@ const BlogCard = () => {
                         </div>
                 ))
             }
-        </div>
+        </motion.div>
     )
 }
 

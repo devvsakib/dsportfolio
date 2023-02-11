@@ -9,18 +9,16 @@ const ProjectCard = ({ project }) => {
                 opacity: 0,
                 x: 0,
                 y: 50,
-                scale: 0.9,
-                rotate: 2
+                scale: 0.9
             }}
             animate={{
                 opacity: 1,
                 x: 0,
                 y: 0,
-                scale: 1,
-                rotate: 0,
+                scale: 1
             }}
             transition={{
-                duration: 1,
+                duration: .7,
                 delay: 0.2,
                 ease: [.5, 0.71, .7, 1.2]
             }}
