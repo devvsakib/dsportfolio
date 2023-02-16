@@ -39,7 +39,7 @@ section {
   background: #07C5D1 !important;
   top: -12rem;
   left: 48%;
-  z-index: 0;
+  z-index: -1;
 }
 
 .quat {

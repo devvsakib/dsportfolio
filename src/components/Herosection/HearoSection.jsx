@@ -13,7 +13,7 @@ const HeroSection = () => {
                                 <tbody>
                                     <tr><td><span className='text-[#07C5D1]'>greeting</span></td> <td><span className='text-[#E02AAD] mx-6'>=</span></td> <td><span className='text-[#A026FF]'><span className='quat'>"</span>Hi! Im<span className='quat'> "</span></span></td></tr>
                                     <tr><td><span className='text-[#07C5D1]'>name</span></td> <td><span className='text-[#E02AAD] mx-6'>=</span></td> <td><span className='devvsakib'>"DevvSakib"</span></td></tr>
-                                    <tr><td><span className='text-[#07C5D1]'>intro</span></td> <td><span className='text-[#E02AAD] mx-6'>=</span></td> <td><span className='text-[#AD62F8] intro'><span className='quat'>"</span>I’m a Frontend Developer and WordPress Expert. Learning is the key of success. I design and build neat,<br /> clean modern website. <span className='quat'> "</span></span></td></tr>
+                                    <tr><td><span className='text-[cc]'>intro</span></td> <td><span className='text-[#E02AAD] mx-6'>=</span></td> <td><span className='text-[#AD62F8] intro'><span className='quat'>"</span>I’m a Frontend Developer and WordPress Expert. Learning is the key of success. I design and build neat,<br /> clean modern website. <span className='quat'> "</span></span></td></tr>
                                 </tbody>
                             </table>
                         </div>
