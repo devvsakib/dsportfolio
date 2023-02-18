@@ -31,7 +31,7 @@
             "name": "DevvSakib",
             "title": "Weather App 2.0",
             "thumb": "/assets/weatherapp2.0.png",
-            "description": "Realtime weather App. Using React, Tailwind CSS and OpenWeather API.",
+            "description": "Realtime weather App. User able to see weather of any city with 7day forecast. Using React, Tailwind CSS and Vite",
             "link": "https://github.com/devvsakib/weather-app-2.0",
             "live_link": "https://wapp20.netlify.app",
             "stack": [
