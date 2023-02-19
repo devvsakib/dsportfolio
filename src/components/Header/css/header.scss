@@ -1,20 +1,23 @@
-header{
-    z-index: 9999;
-    div{
+header {
+    z-index: 999999;
+
+    div {
         background: transparent !important;
     }
 }
-.logo{
-    img{
+
+.logo {
+    img {
         width: 180px;
     }
 }
+
 @media (max-width: 768px) {
-    .nav{
-        background-color: #851eed57;
-        backdrop-filter: blur(5px);
+    .nav {
+        backdrop-filter: blur(4px);
+        background: rgba(2, 2, 2, 0.753) !important;
         position: absolute;
-        right: 0;
+        right: -40px;
         top: 0;
         padding-top: 20px;
         padding-left: 20px;
@@ -22,13 +25,27 @@ header{
         z-index: 999;
         height: 100vh !important;
     }
-    .menu{
-        background: transparent;
-    }
-    .navitem{
+
+    .navitem {
         text-align: left;
         width: 50vw !important;
         padding: .2rem;
+        font-weight: 500;
+
+        p {
+            background: linear-gradient(40deg, #851EED, #07C5D1 40%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
     }
- 
+    .closeBTN{
+        background: linear-gradient(-45deg, #851EED , #07C5D1 60%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        text-fill-color: transparent !important;
+    }
+
 }

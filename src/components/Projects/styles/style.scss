@@ -16,3 +16,10 @@
         background-color: hsl(293, 94%, 57%, 0.7);
     }
 }
+.projectTitle{
+    background: linear-gradient(-15deg, #ed1edc 30%, #07C5D1 70%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-fill-color: transparent !important;
+}

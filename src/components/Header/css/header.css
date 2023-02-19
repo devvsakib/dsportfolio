@@ -1,5 +1,5 @@
 header {
-  z-index: 9999;
+  z-index: 999999;
 }
 header div {
   background: transparent !important;
@@ -11,11 +11,11 @@ header div {
 
 @media (max-width: 768px) {
   .nav {
-    background-color: rgba(133, 30, 237, 0.3411764706);
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    background: rgba(2, 2, 2, 0.753) !important;
     position: absolute;
-    right: 0;
+    right: -40px;
     top: 0;
     padding-top: 20px;
     padding-left: 20px;
@@ -23,12 +23,24 @@ header div {
     z-index: 999;
     height: 100vh !important;
   }
-  .menu {
-    background: transparent;
-  }
   .navitem {
     text-align: left;
     width: 50vw !important;
     padding: 0.2rem;
+    font-weight: 500;
+  }
+  .navitem p {
+    background: linear-gradient(40deg, #851EED, #07C5D1 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .closeBTN {
+    background: linear-gradient(-45deg, #851EED, #07C5D1 60%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-fill-color: transparent !important;
   }
 }/*# sourceMappingURL=header.css.map */

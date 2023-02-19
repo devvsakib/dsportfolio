@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import './css/header.css'
 import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
 
 const Header = () => {
     const navElement = [
@@ -39,14 +38,14 @@ const Header = () => {
                 className={`nav  transition delay-150 ease-in-out ${menuActive ? "" : "hidden"} `}
             >
                 <button
-                    className="text-3xl text-white md:hidden mb-4"
+                    className="text-3xl text-white md:hidden mb-4 closeBTN"
                     onClick={() => setMenuActive(!menuActive)}
                 >
-                    <CloseIcon className="text-white font-bold" />
+                    x
                 </button>
                 <div className="flex list-none flex-col items-center justify-center gap-[2rem] md:flex-row md:gap-[0.6rem] menu">
                     {navElement.map((e, key) => (
-                        <Link to={e.link} key={key} className="navitem ml-4 hover:text-[#07C5D1] transition-colors delay-75 ease-in-out"
+                        <Link to={e.link} key={key} className="navitem ml-4 hover:text-[#07C5D1] transition-colors delay-75 ease-in-out uppercase"
                         >
                             {
                                 screenSize < 768 ? (
@@ -56,7 +55,9 @@ const Header = () => {
                                         {e.name}
                                     </p>
                                 ) : (
-                                    e.name
+                                    <p>
+                                        {e.name}
+                                    </p>
                                 )
                             }
 

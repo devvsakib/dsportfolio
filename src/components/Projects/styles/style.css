@@ -15,4 +15,11 @@
   100% {
     background-color: hsla(293deg, 94%, 57%, 0.7);
   }
+}
+.projectTitle {
+  background: linear-gradient(-15deg, #ed1edc 30%, #07C5D1 70%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-fill-color: transparent !important;
 }/*# sourceMappingURL=style.css.map */
