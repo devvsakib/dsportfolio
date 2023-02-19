@@ -112,7 +112,7 @@
             "thumb": "/assets/justiceweb.png",
             "description": "Legal Solutions website. Using HTML and Tailwind CSS",
             "source_code": "https://github.com/devvsakib/devvsakib",
-            "live_link": "https://legalsolutionsph.netlify.app/https://devvsakib.github.io/devvsakib",
+            "live_link": "https://legalsolutionsph.netlify.app",
             "stack": [
                 "https://img.icons8.com/color/512/html-5.png",
                 "https://img.icons8.com/color/512/tailwindcss.png"
