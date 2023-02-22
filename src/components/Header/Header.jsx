@@ -8,6 +8,7 @@ const Header = () => {
         { name: 'Home', link: '/' },
         { name: 'Projects', link: '/projects' },
         { name: 'Blog', link: '/blog' },
+        // { name: 'NF Test', link: '/notfound' },
         { name: 'Contact', link: '/contact' }]
     const [menuActive, setMenuActive] = useState(false);
     const [screenSize, setScreenSize] = useState();

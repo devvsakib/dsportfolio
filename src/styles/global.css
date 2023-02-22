@@ -1,59 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Tauri&family=Teko:wght@300;400;500;600&display=swap');
 
 :root {
-    --primary-color: #AD30FA;
-    --secondary-color: #07C5D1;
-    --background-color: #01041E;
-    --circle-color: rgba(74, 8, 125, 0.36);
-    --text-background: linear-gradient(84.41deg, #851EED 21.84%, #07C5D1 83.77%);
-    --brackets-color: #FFF506;
-    --equal-color: #E02AAD;
-    --para-color: #AD62F8;
+  --primary-color: #AD30FA;
+  --secondary-color: #07C5D1;
+  --background-color: #01041E;
+  --circle-color: rgba(74, 8, 125, 0.36);
+  --text-background: linear-gradient(84.41deg, #851EED 21.84%, #07C5D1 83.77%);
+  --brackets-color: #FFF506;
+  --equal-color: #E02AAD;
+  --para-color: #AD62F8;
 
 
-    --font-size: 28px;
-    --title-size: 180px;
-    --font-weight: normal;
-    --font-family: 'Tauri', 'Raleway', sans-serif;
-    --title-font: 'Teko', 'Raleway', sans-serif;
+  --font-size: 28px;
+  --title-size: 180px;
+  --font-weight: normal;
+  --font-family: 'Tauri', 'Raleway', sans-serif;
+  --title-font: 'Teko', 'Raleway', sans-serif;
 }
 
 .hamburger {
-    display: block;
+  display: block;
 }
 
 @media (min-width: 768px) {
-    .hamburger {
-        display: none;
-        z-index: 77;
-    }
+  .hamburger {
+    display: none;
+    z-index: 77;
+  }
+}
+
+.devv-btn {
+  background: linear-gradient(84.41deg, #851EED 21.84%, #07C5D1 83.77%);
+}
+
+.devv-btn-hover {
+  background: linear-gradient(84.41deg, #07C5D1 21.84%, #851EED 83.77%);
 }
 
 .skeleton {
-    -webkit-animation: skeleton 1s linear infinite alternate;
-            animation: skeleton 1s linear infinite alternate;
-    width: 100%;
-    height: 100%;
+  -webkit-animation: skeleton 1s linear infinite alternate;
+  animation: skeleton 1s linear infinite alternate;
+  width: 100%;
+  height: 100%;
+}
+
+.thumbnail {
+  width: 100vw;
+}
+
+@-webkit-keyframes skeleton {
+  0% {
+    background-color: #07C5D1;
   }
-  
-  .thumbnail {
-    width: 100vw;
+
+  100% {
+    background-color: hsla(293deg, 94%, 57%, 0.7);
   }
-  
-  @-webkit-keyframes skeleton {
-    0% {
-      background-color: #07C5D1;
-    }
-    100% {
-      background-color: hsla(293deg, 94%, 57%, 0.7);
-    }
+}
+
+@keyframes skeleton {
+  0% {
+    background-color: hsla(199deg, 72%, 59%, 0.315);
   }
-  
-  @keyframes skeleton {
-    0% {
-      background-color: hsla(199deg, 72%, 59%, 0.315);
-    }
-    100% {
-      background-color: hsla(293deg, 94%, 57%, 0.7);
-    }
-  }/*# sourceMappingURL=style.css.map */
+
+  100% {
+    background-color: hsla(293deg, 94%, 57%, 0.7);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
