@@ -20,6 +20,7 @@ function App() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/*' element={<NotFound />} />
+        <Route path='/secret' element={<NotFound />} />
       </Routes>
     </Layout>
   );
