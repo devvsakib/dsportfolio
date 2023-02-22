@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 
 const NotFound = () => {
-    const meme = ["/assets/lost.gif", "/assets/lost1.gif", "/assets/lost2.gif", "/assets/lost3.gif", "/assets/lost4.gif"]
+    const meme = ["/assets/lost.gif", "/assets/lost1.gif", "/assets/lost2.gif", "/assets/lost3.gif"]
     const [lostMeme, setLostMeme] = useState('')
     const [genNumber, setGenNumber] = useState(null)
 
