@@ -3,7 +3,7 @@ import Notice from '../components/Notice/Notice'
 const About = () => {
     return (
         <>
-            <Notice />
+            {/* <Notice /> */}
             <Details />
         </>
     )

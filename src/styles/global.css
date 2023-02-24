@@ -28,7 +28,8 @@
     z-index: 77;
   }
 }
-.devv-title{
+
+.devv-title {
   font-family: var(--title-font);
   z-index: 99;
   font-weight: 400;
@@ -38,12 +39,42 @@
   background-clip: text;
   text-fill-color: transparent;
 }
+
 .devv-btn {
   background: linear-gradient(84.41deg, #851EED 21.84%, #07C5D1 83.77%);
 }
 
 .devv-btn-hover {
   background: linear-gradient(84.41deg, #07C5D1 21.84%, #851EED 83.77%);
+}
+
+.devv-bg {
+
+  background: linear-gradient(45deg, #F17C5815, #E9458415, #24AADB15, #27DBB115, #FFDC1815, #FF370615);
+  background-size: 600% 100%;
+  animation: devvAnimation 4s linear infinite alternate;
+  -webkit-animation: devvAnimation 4s linear infinite alternate;
+
+}
+
+.devvTextAnimation {
+  color: #fc3735;
+  background: linear-gradient(45deg, #E94584, #24AADB, #27DBB1, #FFDC18, var(--primary-color));
+  -webkit-background-clip: text;
+  background-size: 600% 100%;
+  -webkit-text-fill-color: transparent;
+  background-size: 600% 100%;
+  -webkit-animation: devvAnimation 14s linear infinite alternate;
+  animation: devvAnimation 14s linear infinite alternate;
+}
+
+.devv-icon {
+  color: #fc3735;
+  background: -webkit-linear-gradient(left, var(--primary-color), var(--secondary-color), var(--brackets-color));
+  background-size: 1600px 200px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animationIcon 5s infinite alternate;
 }
 
 .skeleton {
@@ -74,6 +105,37 @@
 
   100% {
     background-color: hsla(293deg, 94%, 57%, 0.7);
+  }
+}
+
+
+@keyframes devvAnimation {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}
+
+@keyframes devvTextAnimation {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}
+
+@keyframes animationIcon {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 100%;
   }
 }
 
