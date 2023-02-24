@@ -28,7 +28,16 @@
     z-index: 77;
   }
 }
-
+.devv-title{
+  font-family: var(--title-font);
+  z-index: 99;
+  font-weight: 400;
+  background: linear-gradient(84.41deg, #851EED 30%, #07C5D1 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 .devv-btn {
   background: linear-gradient(84.41deg, #851EED 21.84%, #07C5D1 83.77%);
 }

@@ -8,6 +8,7 @@ const Header = () => {
         { name: 'Home', link: '/' },
         { name: 'Projects', link: '/projects' },
         { name: 'Blog', link: '/blog' },
+        { name: 'About', link: '/about' },
         // { name: 'NF Test', link: '/notfound' },
         { name: 'Contact', link: '/contact' }]
     const [menuActive, setMenuActive] = useState(false);
