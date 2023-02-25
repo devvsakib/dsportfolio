@@ -4,7 +4,7 @@ import SocialLinks from '../SocialLinks/SocialLinks'
 const Details = () => {
     return (
         <div className="mt-10 z-[9999999999999999999999999]">
-            <div className="grid grid-cols-1 md:grid-cols-2  items-center gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2  grid-rows-1  items-center gap-10">
                 <div className="rounded-full overflow-hidden bg-gradient-to-r  via-[#ffe700]/5 from-[#851EED]/5 to-[#07C5D1]/5 devv-bg">
                     <img className="w-1/2 mx-auto rounded-full" src="/assets/DevvSakib.png" alt="" />
                 </div>
