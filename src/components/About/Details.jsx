@@ -1,5 +1,4 @@
 import Stack from "./Stack"
-import MovingText from 'react-moving-text'
 import SocialLinks from '../SocialLinks/SocialLinks'
 
 const Details = () => {
@@ -19,16 +18,7 @@ const Details = () => {
                 <SocialLinks/>
             </div>
             <div className="text-center  mt-40">
-                <MovingText
-                    type="unfold"
-                    duration="1000ms"
-                    delay="index * 100ms"
-                    direction="normal"
-                    timing="ease"
-                    iteration="1"
-                    fillMode="none">
-                    <h2 className="devv-title text-3xl md:text-6xl inline">Stacks</h2>
-                </MovingText>
+                <h2 className="devv-title text-3xl md:text-6xl inline">Stacks</h2>
                 <Stack />
             </div>
         </div>
