@@ -74,7 +74,7 @@
   background-size: 1600px 200px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: animationIcon 5s infinite alternate;
+  animation: animationIcon 3s infinite alternate;
 }
 
 .skeleton {

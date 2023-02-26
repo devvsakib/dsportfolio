@@ -2,7 +2,7 @@ import BlogCard from '../components/Blog/BlogCard'
 
 const Blog = () => {
     return (
-        <div>
+        <div className='mb-10'>
              {/*circle div */}
             <div>
                 <div className="circle -z-99999 "></div>
