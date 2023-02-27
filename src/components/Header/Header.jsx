@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import './css/header.css'
 import MenuIcon from '@mui/icons-material/Menu';
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 const Header = () => {
     const navElement = [
@@ -13,7 +14,8 @@ const Header = () => {
         { name: 'Contact', link: '/contact' }]
     const [menuActive, setMenuActive] = useState(false);
     const [screenSize, setScreenSize] = useState();
-
+    const [theme, setTheme] = useState(false);
+    theme ? document.body.style.background = "white" : document.body.style.background = ""
     useEffect(() => {
         const handleResize = () => setScreenSize(window.innerWidth);
         window.addEventListener("resize", handleResize);
@@ -65,6 +67,9 @@ const Header = () => {
 
                         </Link>
                     ))}
+                    <button className='ml-4' onClick={() => setTheme(!theme)}>
+                        {theme ? <FaSun /> : <FaMoon />}
+                    </button>
                 </div>
             </div>
             <button
