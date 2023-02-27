@@ -8,8 +8,8 @@ body {
   font-family: tauri;
   overflow-x: hidden;
   background: linear-gradient(to left,
-      #01282b,
-      #25013b);
+      #040224,
+      #0c0129);
   background-size: cover !important;
   background-position: center center;
 }
@@ -32,11 +32,11 @@ header {
   opacity: 0.3;
   border-radius: 50%;
   filter: blur(10rem);
-  background: linear-gradient(84.41deg, #851EED 60.84%, #07C5D1 83.77%);
+  background: linear-gradient(84.41deg, #851eed6c 60.84%, #07c4d179 83.77%);
 }
 
 .c2 {
-  background: #AD30FA !important;
+  background: #8218c994 !important;
   top: 1rem !important;
   left: 60rem;
   z-index: -999;
@@ -44,7 +44,7 @@ header {
 }
 
 .c3 {
-  background: #07C5D1 !important;
+  background: linear-gradient(84.41deg, #07c4d180 60.84%, #851eed 83.77%);
   top: -12rem;
   left: 48%;
   z-index: -1;
