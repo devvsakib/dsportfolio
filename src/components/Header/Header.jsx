@@ -2,7 +2,8 @@ import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import './css/header.css'
 import MenuIcon from '@mui/icons-material/Menu';
-import { FaMoon, FaSun } from 'react-icons/fa';
+// import { FaMoon, FaSun } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Header = () => {
     const navElement = [
@@ -81,11 +82,22 @@ const Header = () => {
             >
                 <MenuIcon className="text-[#07C5D1]" />
             </button>
-            <button className='fixed -left-3 -bottom-3 w-28'
-            onClick={() => setTheme(!theme)}
+            <motion.button
+                drag="y"
+                dragTransition={{ bounceStiffness: 800, bounceDamping: 10 }}
+                dragConstraints={{ left: 0, right: 0, top: -700, bottom: 0 }}
+                whileDrag={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                whileHover={{
+                    scale: 1.1,
+                }}
+                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+
+                className='fixed -left-3 -bottom-3 w-28'
+                onClick={() => setTheme(!theme)}
             >
-                <img src="/assets/test.png" className={`${!theme && 'invert'}`} alt="" />
-            </button>
+                <img src="/assets/test.png" className={`${!theme && 'invert saturate-200 hue-rotate-30'}`} alt="" />
+            </motion.button>
         </header >
     )
 }
