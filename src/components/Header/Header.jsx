@@ -15,7 +15,9 @@ const Header = () => {
     const [menuActive, setMenuActive] = useState(false);
     const [screenSize, setScreenSize] = useState();
     const [theme, setTheme] = useState(false);
+
     theme ? document.body.style.background = "white" : document.body.style.background = ""
+
     useEffect(() => {
         const handleResize = () => setScreenSize(window.innerWidth);
         window.addEventListener("resize", handleResize);
@@ -68,15 +70,21 @@ const Header = () => {
                         </Link>
                     ))}
                     <button className='ml-4' onClick={() => setTheme(!theme)}>
-                        {theme ? <FaSun /> : <FaMoon />}
+                        {/* {theme ? <FaSun /> : <FaMoon />} */}
+                        <img src={!theme ? "/assets/lightcat.png" : "/assets/darkcat.png"} className='w-8' alt="" />
                     </button>
                 </div>
             </div>
             <button
-                className="hamburger "
+                className="hamburger"
                 onClick={() => setMenuActive(!menuActive)}
             >
                 <MenuIcon className="text-[#07C5D1]" />
+            </button>
+            <button className='fixed -left-3 -bottom-3 w-28'
+            onClick={() => setTheme(!theme)}
+            >
+                <img src="/assets/test.png" className={`${!theme && 'invert'}`} alt="" />
             </button>
         </header >
     )
