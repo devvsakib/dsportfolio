@@ -11,7 +11,7 @@ const Details = () => {
                         <img className="w-1/2 mx-auto rounded-full" src="/assets/DevvSakib.png" alt="" />
                     </div>
                 </div>
-                <div className={`text-md tracking-wider z-[9999] font-[poppins] text-white`}>
+                <div className={`text-md tracking-wider z-[9999] font-[poppins]`}>
                     <p className="mb-3">I am a <span>Frontend Developer</span> with a working proficiency in React, HTML, CSS, JavaScript. Contributting to Open-Source daily. Open-source is the best way to connect with new people and it help to gain more knowledge.</p>
                     <p className="">I have a solid understanding of Tailwind, Bootstrap, SASS, and Git Version. I am currently building cool things to expand my experience.</p>
                     <div className="mt-5 devv-bg p-5 rounded-lg shadow-lg">

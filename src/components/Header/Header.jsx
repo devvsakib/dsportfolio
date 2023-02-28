@@ -4,11 +4,20 @@ import './css/header.css'
 import MenuIcon from '@mui/icons-material/Menu';
 // import { FaMoon, FaSun } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import Theme from "../utils/Theme.jsx"
 
-
+const getThemeStatus = () => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme ? JSON.parse(savedTheme) : false;
+}
 const Header = () => {
-    const { theme, toggleTheme } = Theme()
+    const [theme, setTheme] = useState(getThemeStatus() || false);
+    
+    localStorage.setItem('theme', !theme)
+    theme ? document.body.style.background = "white" : document.body.style.background = ""
+
+    const toggleTheme = () => {
+        setTheme(!theme);
+    };
     const navElement = [
         { name: 'Home', link: '/' },
         { name: 'Projects', link: '/projects' },
@@ -18,8 +27,6 @@ const Header = () => {
         { name: 'Contact', link: '/contact' }]
     const [menuActive, setMenuActive] = useState(false);
     const [screenSize, setScreenSize] = useState();
-
-    
 
     useEffect(() => {
         const handleResize = () => setScreenSize(window.innerWidth);
