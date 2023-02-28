@@ -5,6 +5,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 // import { FaMoon, FaSun } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
+const getThemeStatus = () => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme ? JSON.parse(savedTheme) : false;
+}
+
 const Header = () => {
     const navElement = [
         { name: 'Home', link: '/' },
@@ -15,9 +20,10 @@ const Header = () => {
         { name: 'Contact', link: '/contact' }]
     const [menuActive, setMenuActive] = useState(false);
     const [screenSize, setScreenSize] = useState();
-    const [theme, setTheme] = useState(false);
+    const [theme, setTheme] = useState(getThemeStatus() || false);
 
     theme ? document.body.style.background = "white" : document.body.style.background = ""
+    localStorage.setItem('theme', theme)
 
     useEffect(() => {
         const handleResize = () => setScreenSize(window.innerWidth);
@@ -85,7 +91,7 @@ const Header = () => {
             <motion.button
                 drag="y"
                 dragTransition={{ bounceStiffness: 800, bounceDamping: 10 }}
-                dragConstraints={{ left: 0, right: 0, top: -700, bottom: 0 }}
+                dragConstraints={{ left: 0, right: 0, top: -400, bottom: 10 }}
                 whileDrag={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
                 whileHover={{
@@ -96,7 +102,7 @@ const Header = () => {
                 className='fixed -left-3 -bottom-3 w-28'
                 onClick={() => setTheme(!theme)}
             >
-                <img src="/assets/test.png" className={`${!theme && 'invert saturate-200 hue-rotate-30'}`} alt="" />
+                <img src="/assets/test.png" className={`${!theme && 'invert saturate-200 hue-rotate-30 origin-top-left rotate-6'} transition-all ease-linear duration-500`} alt="" />
             </motion.button>
         </header >
     )

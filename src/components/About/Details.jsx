@@ -1,5 +1,6 @@
 import Stack from "./Stack"
 import SocialLinks from '../SocialLinks/SocialLinks'
+import { FaDownload } from 'react-icons/fa'
 
 const Details = () => {
     return (
@@ -18,12 +19,13 @@ const Details = () => {
                         <p className="devvTextAnimation">Looking for the right opportunity. If you want you can contact with me.</p>
                     </div>
                 </div>
-                <div className="text-center md:col-span-2  mt-3">
-                    <button className="bg-gradient-to-bl from-[#07C5D1]/50 to-[#E02AAD]/50 text-white px-5 py-2 rounded  shadow-black/60 shadow-md">
+                <div className="text-center md:col-span-2  mt-3 flex justify-center">
+                    <button className="bg-gradient-to-bl gap-3 flex items-center justify-center from-[#07C5D1]/50 to-[#E02AAD]/50 text-white px-5 py-2 rounded  shadow-black/60 shadow-md">
                         <a href="/assets/devvsakib.pdf" download>
-                        Download CV
+                            RESUME
                         </a>
-                        </button>
+                        <FaDownload />
+                    </button>
                 </div>
                 <SocialLinks />
             </div>
