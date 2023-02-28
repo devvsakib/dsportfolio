@@ -11,7 +11,7 @@ const getThemeStatus = () => {
 }
 const Header = () => {
     const [theme, setTheme] = useState(getThemeStatus() || false);
-    
+
     localStorage.setItem('theme', !theme)
     theme ? document.body.style.background = "white" : document.body.style.background = ""
 
@@ -46,7 +46,7 @@ const Header = () => {
         <header className='flex z-99999 justify-between items-center relative p-0 py-5'>
             <div className="logo">
                 <Link to="/">
-                    <img src="assets/Logo.png" alt="" srcSet="" />
+                    <img src="assets/Logo.png" alt="DevvSakib Logo"/>
                 </Link>
             </div>
 
@@ -96,14 +96,15 @@ const Header = () => {
                 dragTransition={{ bounceStiffness: 800, bounceDamping: 10 }}
                 dragConstraints={{ left: 0, right: 0, top: -400, bottom: 10 }}
                 whileDrag={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
                 whileHover={{
                     scale: 1.1,
                 }}
-                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                transition={{ type: "spring", stiffness: 500, damping: 30}}
 
                 className='fixed left-0 bottom-0 w-28'
                 onClick={() => toggleTheme()}
+                aria-label="ThemeBtn"
+                id="themeSwitcher"
             >
                 <img src={theme ? "/assets/test.png" : "/assets/test2.png"} className={`${theme && 'origin-top-left rotate-6'} w-16 transition-all ease-linear duration-500`} alt="" />
             </motion.button>
