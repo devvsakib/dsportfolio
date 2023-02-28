@@ -4,13 +4,11 @@ import './css/header.css'
 import MenuIcon from '@mui/icons-material/Menu';
 // import { FaMoon, FaSun } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Theme from "../utils/Theme.jsx"
 
-const getThemeStatus = () => {
-    const savedTheme = localStorage.getItem('theme');
-    return savedTheme ? JSON.parse(savedTheme) : false;
-}
 
 const Header = () => {
+    const { theme, toggleTheme } = Theme()
     const navElement = [
         { name: 'Home', link: '/' },
         { name: 'Projects', link: '/projects' },
@@ -20,10 +18,6 @@ const Header = () => {
         { name: 'Contact', link: '/contact' }]
     const [menuActive, setMenuActive] = useState(false);
     const [screenSize, setScreenSize] = useState();
-    const [theme, setTheme] = useState(getThemeStatus() || false);
-
-    theme ? document.body.style.background = "white" : document.body.style.background = ""
-    localStorage.setItem('theme', theme)
 
     useEffect(() => {
         const handleResize = () => setScreenSize(window.innerWidth);
@@ -77,8 +71,8 @@ const Header = () => {
                         </Link>
                     ))}
                     {/* <button className='ml-4' onClick={() => setTheme(!theme)}> */}
-                        {/* {theme ? <FaSun /> : <FaMoon />} */}
-                        {/* <img src={!theme ? "/assets/lightcat.png" : "/assets/darkcat.png"} className='w-8' alt="" /> */}
+                    {/* {theme ? <FaSun /> : <FaMoon />} */}
+                    {/* <img src={!theme ? "/assets/lightcat.png" : "/assets/darkcat.png"} className='w-8' alt="" /> */}
                     {/* </button> */}
                 </div>
             </div>
@@ -99,10 +93,10 @@ const Header = () => {
                 }}
                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
 
-                className='fixed -left-3 -bottom-3 w-28'
-                onClick={() => setTheme(!theme)}
+                className='fixed left-0 bottom-0 w-28'
+                onClick={() => toggleTheme()}
             >
-                <img src="/assets/test.png" className={`${!theme && 'invert saturate-200 hue-rotate-30 origin-top-left rotate-6'} transition-all ease-linear duration-500`} alt="" />
+                <img src={theme ? "/assets/test.png" : "/assets/test2.png"} className={`${theme && 'origin-top-left rotate-6'} w-16 transition-all ease-linear duration-500`} alt="" />
             </motion.button>
         </header >
     )
