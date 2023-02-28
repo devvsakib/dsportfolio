@@ -10,14 +10,11 @@ const getThemeStatus = () => {
     return savedTheme ? JSON.parse(savedTheme) : false;
 }
 const Header = () => {
-    const [theme, setTheme] = useState(getThemeStatus() || false);
+    const [theme, setTheme] = useState(getThemeStatus || false);
 
-    localStorage.setItem('theme', !theme)
+    localStorage.setItem('theme', theme)
     theme ? document.body.style.background = "white" : document.body.style.background = ""
 
-    const toggleTheme = () => {
-        setTheme(!theme);
-    };
     const navElement = [
         { name: 'Home', link: '/' },
         { name: 'Projects', link: '/projects' },
@@ -46,7 +43,7 @@ const Header = () => {
         <header className='flex z-99999 justify-between items-center relative p-0 py-5'>
             <div className="logo">
                 <Link to="/">
-                    <img src="assets/Logo.png" alt="DevvSakib Logo"/>
+                    <img src="assets/Logo.png" alt="DevvSakib Logo" />
                 </Link>
             </div>
 
@@ -99,10 +96,10 @@ const Header = () => {
                 whileHover={{
                     scale: 1.1,
                 }}
-                transition={{ type: "spring", stiffness: 500, damping: 30}}
+                transition={{ type: "spring", stiffness: 500, damping: 30 }}
 
                 className='fixed left-0 bottom-0 w-28'
-                onClick={() => toggleTheme()}
+                onClick={() => setTheme(!theme)}
                 aria-label="ThemeBtn"
                 id="themeSwitcher"
             >
