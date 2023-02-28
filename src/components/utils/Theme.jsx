@@ -9,6 +9,7 @@ const Theme = () => {
     const [theme, setTheme] = useState(getThemeStatus() ? true : false);
     localStorage.setItem('theme', !theme)
     theme ? document.body.style.background = "white" : document.body.style.background = ""
+    
     const toggleTheme = () => {
         setTheme(!theme);
     };

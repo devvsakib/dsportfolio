@@ -3,7 +3,7 @@ import SocialLinks from '../SocialLinks/SocialLinks'
 import { FaDownload } from 'react-icons/fa'
 import Theme from "../utils/Theme.jsx"
 const Details = () => {
-    const { theme } = Theme()
+    const { theme } = Theme();
     return (
         <div className="mt-10">
             <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1  items-center gap-10">
