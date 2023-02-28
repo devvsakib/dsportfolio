@@ -18,10 +18,10 @@ function App() {
       {/* <BGShape/> */}
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/blog' element={<Blog />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route exact path='/projects' element={<Projects />} />
+        <Route exact path='/about' element={<About />} />
+        <Route exact path='/blog' element={<Blog />} />
+        <Route exact path='/contact' element={<Contact />} />
         <Route path='/*' element={<NotFound />} />
         <Route path='/secret' element={<NotFound />} />
       </Routes>

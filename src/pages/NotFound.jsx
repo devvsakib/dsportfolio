@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import BGShape from '../components/BGShape'
 
 const NotFound = () => {
     const meme = ["/assets/lost.gif", "/assets/lost1.gif", "/assets/lost2.gif", "/assets/lost3.gif"]
@@ -28,6 +29,7 @@ const NotFound = () => {
                     <Link to="/">Come Back Home</Link>
                 </button>
             </div>
+            <BGShape />
         </div>
     )
 }

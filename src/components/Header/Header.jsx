@@ -19,6 +19,8 @@ const Header = () => {
     const [menuActive, setMenuActive] = useState(false);
     const [screenSize, setScreenSize] = useState();
 
+    
+
     useEffect(() => {
         const handleResize = () => setScreenSize(window.innerWidth);
         window.addEventListener("resize", handleResize);
