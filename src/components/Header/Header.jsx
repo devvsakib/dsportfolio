@@ -70,10 +70,10 @@ const Header = () => {
 
                         </Link>
                     ))}
-                    <button className='ml-4' onClick={() => setTheme(!theme)}>
+                    {/* <button className='ml-4' onClick={() => setTheme(!theme)}> */}
                         {/* {theme ? <FaSun /> : <FaMoon />} */}
-                        <img src={!theme ? "/assets/lightcat.png" : "/assets/darkcat.png"} className='w-8' alt="" />
-                    </button>
+                        {/* <img src={!theme ? "/assets/lightcat.png" : "/assets/darkcat.png"} className='w-8' alt="" /> */}
+                    {/* </button> */}
                 </div>
             </div>
             <button
