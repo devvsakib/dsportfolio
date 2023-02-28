@@ -11,7 +11,6 @@ const getThemeStatus = () => {
 }
 const Header = () => {
     const [theme, setTheme] = useState(getThemeStatus || false);
-
     localStorage.setItem('theme', theme)
     theme ? document.body.style.background = "white" : document.body.style.background = ""
 
@@ -22,6 +21,8 @@ const Header = () => {
         { name: 'About', link: '/about' },
         // { name: 'NF Test', link: '/notfound' },
         { name: 'Contact', link: '/contact' }]
+
+    const [alertMsg, setAlertMsg] = useState(false);
     const [menuActive, setMenuActive] = useState(false);
     const [screenSize, setScreenSize] = useState();
 
@@ -34,10 +35,24 @@ const Header = () => {
     useEffect(() => {
         if (screenSize < 768) {
             setMenuActive(false);
+            console.log(screenSize);
         } else {
             setMenuActive(true);
         }
     }, [screenSize]);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setAlertMsg(!alertMsg);
+        }, 6000);
+    }, [])
+
+
+    if (alertMsg) {
+        setTimeout(() => {
+            setAlertMsg(!alertMsg);
+        }, 3500);
+    }
 
     return (
         <header className='flex z-99999 justify-between items-center relative p-0 py-5'>
@@ -94,16 +109,28 @@ const Header = () => {
                 dragConstraints={{ left: 0, right: 0, top: -400, bottom: 10 }}
                 whileDrag={{ scale: 1.2 }}
                 whileHover={{
-                    scale: 1.1,
+                    scale: 1.05,
                 }}
                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
 
-                className='fixed left-0 bottom-0 w-28'
+                className='fixed -left-0 bottom-0 w-28'
                 onClick={() => setTheme(!theme)}
                 aria-label="ThemeBtn"
                 id="themeSwitcher"
             >
-                <img src={theme ? "/assets/test.png" : "/assets/test2.png"} className={`${theme && 'origin-top-left rotate-6'} w-16 transition-all ease-linear duration-500`} alt="" />
+                {
+                    alertMsg ? (
+                        <motion.span
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 25 }}
+                            whileInView={{ scale: [0, 1.1] }}
+                            transition={{ duration: .5, ease: "easeInOut", type: "spring", stiffness: 500, damping: 30 }}
+                        >{theme ? "Dark Theme?" : "Light Theme?"}</motion.span>
+                    ) : null
+                }
+                <img src={theme ? "/assets/test.png" : "/assets/test2.png"} className={`${theme ? 'rotate-0' : 'rotate-6'} 
+                 origin-top-right w-16 z-10 transition-all ease-linear duration-500`} alt="" />
             </motion.button>
         </header >
     )
