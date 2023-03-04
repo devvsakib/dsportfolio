@@ -31,10 +31,16 @@
             "thumbnail": "/assets/How-to-start-a-coding-youtube-channel.png"
         },
         {
-            "title": "Top 5 Frontend Interview questions you must know! Ans with Example ",
+            "title": "Top 5 Frontend Interview questions you must know! Ans with Example",
             "url": "https://dev.to/devvsakib/top-5-frontend-interview-questions-you-must-know-ans-with-example-5cnm",
             "content": "Today's topic is about FRONTEND interview with most frequently asked in interview. I have tried to collect the most important and frequently asked questions. I hope this will help you to prepare for your next FRONTEND interview. If you have any questions, please let me know in the comments section. I will try to answer them as soon as possible.",
             "thumbnail": "https://res.cloudinary.com/practicaldev/image/fetch/s--e3Z0DN9O--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vbue66khzmgrehi0z8l9.png"
+        },
+        {
+            "title": "How to solve Vercel and Netlify \"Page Not Found\" after page refresh [SOLVED]",
+            "url": "https://dev.to/devvsakib/how-to-solve-vercel-and-netlify-page-not-found-after-page-refresh-solved-2ol7",
+            "content": "You obviously deployed your React App in vercel or netlify right? If you are using react-router then you must face the shitty Page Not Found page.",
+            "thumbnail": "https://res.cloudinary.com/practicaldev/image/fetch/s--je8jwU0b--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hw4tkvch14j6r384tik1.png"
         }
     ]
 }
