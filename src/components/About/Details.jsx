@@ -8,7 +8,7 @@ const Details = () => {
 
                 <div className="justify-center">
                     <div className="rounded-full overflow-hidden bg-gradient-to-r  via-[#ffe700]/5 from-[#851EED]/5 to-[#07C5D1]/5 devv-bg">
-                        <img className="w-1/2 mx-auto rounded-full" src="/assets/DevvSakib.png" alt="" />
+                        <img className="w-1/2 mx-auto rounded-full devv-img-skeleton h-auto" src="/assets/DevvSakib.png" alt="DevvSakib.png" />
                     </div>
                 </div>
                 <div className={`text-md tracking-wider z-[9999] font-[poppins]`}>
