@@ -9,7 +9,7 @@ const Stack = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
                     {
                         stacksFrontend?.map((item, idx) => (
-                            <button key={idx} className="bg-gradient-to-r from-[#AD30FA]/60 to-[#07C5D1]/60 hover:shadow-[#AD30FA] hover:shadow-lg transition-all ease-linear text-white px-5 py-2 rounded shadow-black/60 shadow-md block">{item}</button>
+                            <button key={idx} className="devv-btn">{item}</button>
                         ))
                     }
                 </div>
@@ -20,7 +20,7 @@ const Stack = () => {
 
                     {
                         stacksBackend?.map((item, idx) => (
-                            <button key={idx} className="bg-gradient-to-r from-[#AD30FA]/60 to-[#07C5D1]/60 hover:shadow-[#AD30FA] hover:shadow-lg transition-all ease-linear text-white px-5 py-2 rounded shadow-black/60 shadow-md">{item}</button>
+                            <button key={idx} className="devv-btn">{item}</button>
                         ))
                     }
                 </div>

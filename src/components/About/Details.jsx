@@ -19,7 +19,7 @@ const Details = () => {
                     </div>
                 </div>
                 <div className="text-center md:col-span-2  mt-3 flex justify-center">
-                    <button className="bg-gradient-to-bl gap-3 flex items-center justify-center from-[#07C5D1]/50 to-[#E02AAD]/50 text-white px-5 py-2 rounded  shadow-black/60 shadow-md">
+                    <button className="gap-3 flex items-center justify-center devv-btn px-5 py-2 rounded  shadow-black/60 shadow-md">
                         <a href="/assets/devvsakib.pdf" download>
                             RESUME
                         </a>

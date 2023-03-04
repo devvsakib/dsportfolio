@@ -21,7 +21,9 @@
 .hamburger {
   display: block;
 }
-
+.devv-btn{
+  @apply bg-gradient-to-r from-[#AD30FA05] to-[#2ea2aa59] hover:shadow-[#AD30FA] hover:shadow-lg transition-all ease-linear text-white px-5 py-2 rounded shadow-[#AD30FA]/30 shadow-md  backdrop-blur-[10px] !important;
+}
 @media (min-width: 768px) {
   .hamburger {
     display: none;
