@@ -7,7 +7,7 @@ section {
   font-family: var(--title-font);
   z-index: 99;
   font-weight: 400;
-  font-size: 13em !important;
+  font-size: 2em !important;
   background: linear-gradient(84.41deg, #851EED 21.84%, #07C5D1 83.77%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -24,17 +24,17 @@ section {
 
 @media (min-width: 532px) {
   .devvsakib {
-    font-size: 90px !important;
+    font-size: 80px !important;
   }
 }
 @media (min-width: 768px) {
   .devvsakib {
-    font-size: 13vw !important;
+    font-size: 11vw !important;
   }
 }
 @media (min-width: 1040px) {
   .devvsakib {
-    font-size: 13rem !important;
+    font-size: 10rem !important;
   }
 }
 @media (max-width: 532px) {
@@ -57,7 +57,7 @@ section {
     justify-content: center;
   }
   .devvsakib {
-    font-size: 13vw !important;
+    font-size: 10vw !important;
   }
   .intro {
     font-size: 12px;

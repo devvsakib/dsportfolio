@@ -10,10 +10,10 @@
 
 @keyframes skeleton {
   0% {
-    background-color: hsla(199deg, 72%, 59%, 0.315);
+    background-color: hsla(199, 72%, 59%, 0.315);
   }
   100% {
-    background-color: hsla(293deg, 94%, 57%, 0.7);
+    background-color: hsla(293, 94%, 57%, 0.7);
   }
 }
 .projectTitle {
