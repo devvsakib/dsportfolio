@@ -4,7 +4,7 @@ import './css/header.css'
 import MenuIcon from '@mui/icons-material/Menu';
 // import { FaMoon, FaSun } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { ThemeContext } from '../../context/themeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { useContext } from 'react';
 
 
