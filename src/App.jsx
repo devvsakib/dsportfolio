@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Route, Routes } from 'react-router-dom';
 import './index.css';
 import './styles/global.css';
@@ -10,21 +11,35 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Layout from './components/Layout';
 import BGShape from './components/BGShape';
+import { ThemeContext } from './context/themeContext';
+
+const getThemeStatus = () => {
+  const savedTheme = localStorage.getItem('theme');
+  return savedTheme ? JSON.parse(savedTheme) : false;
+}
+
 
 function App() {
+
+  const [theme, setTheme] = useState(getThemeStatus || false);
+  localStorage.setItem('theme', theme)
+  theme ? document.body.style.background = "white" : document.body.style.background = ""
+
   return (
     <Layout>
-      <Header />
-      {/* <BGShape/> */}
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route exact path='/projects' element={<Projects />} />
-        <Route exact path='/about' element={<About />} />
-        <Route exact path='/blog' element={<Blog />} />
-        <Route exact path='/contact' element={<Contact />} />
-        <Route path='/*' element={<NotFound />} />
-        <Route path='/secret' element={<NotFound />} />
-      </Routes>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <Header />
+        {/* <BGShape/> */}
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route exact path='/projects' element={<Projects />} />
+          <Route exact path='/about' element={<About theme={theme} />} />
+          <Route exact path='/blog' element={<Blog />} />
+          <Route exact path='/contact' element={<Contact />} />
+          <Route path='/*' element={<NotFound />} />
+          <Route path='/secret' element={<NotFound />} />
+        </Routes>
+      </ThemeContext.Provider>
     </Layout>
   );
 }

@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
 import './styles/style.css'
+import { useContext } from 'react';
+import { ThemeContext } from '../../context/themeContext';
 
 const ProjectCard = ({ project }) => {
+    const { theme } = useContext(ThemeContext);
     return (
         <motion.div
             initial={{
@@ -61,7 +64,7 @@ const ProjectCard = ({ project }) => {
             </div>
             <div className="project-card__content bg-transparent">
                 <h2 className="text-2xl mt-3 text-white projectTitle uppercase font-semibold">{project.title}</h2>
-                <p className="text-sm text-white">{project.description}</p>
+                <p className={`text-sm ${!theme ? "" : "text-black"}`}>{project.description}</p>
                 {/* horizontal stack icon */}
                 <div className={`block md:hidden grid grid-flow-col gap-4 justify-start  my-2 bg-transparent w-auto `}>
                     {
@@ -95,12 +98,12 @@ const ProjectCard = ({ project }) => {
                     <motion.button
                         whileTap={{ scale: 0.8 }}
                         whileHover={{ scale: 1.1 }}
-                        className="liveBTN text-white pl-0 p-2 mb-0"><a href={project.live_link} target="_blank" >
+                        className={`liveBTN ${!theme ? "text-white" : "text-black"} pl-0 p-2 mb-0"`}><a href={project.live_link} target="_blank" >
                             Live</a></motion.button>
                     <motion.button
                         whileTap={{ scale: 0.8 }}
                         whileHover={{ scale: 1.1 }}
-                        className="codeBTN text-white p-2 mb-0"><a href={project.source_code} target="_blank" >
+                        className={`codeBTN ${!theme ? "text-white" : "text-black"} p-2 mb-0"`}><a href={project.source_code} target="_blank" >
                             Code</a></motion.button>
                 </div>
             </div>

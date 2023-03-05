@@ -1,4 +1,4 @@
-const Stack = () => {
+const Stack = ({ theme }) => {
     const stacksFrontend = ["React", "JavaScript", "HTML5", "CSS3", "Tailwind", "Bootstrap", "Sass"]
     const stacksBackend = ["Node.js", "Express", "MongoDB", "RestAPI"]
     return (
@@ -9,7 +9,7 @@ const Stack = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
                     {
                         stacksFrontend?.map((item, idx) => (
-                            <button key={idx} className="devv-btn">{item}</button>
+                            <button key={idx} className={` devv-btn ${!theme ? "text-white" : "text-black"}`}>{item}</button>
                         ))
                     }
                 </div>
@@ -20,7 +20,7 @@ const Stack = () => {
 
                     {
                         stacksBackend?.map((item, idx) => (
-                            <button key={idx} className="devv-btn">{item}</button>
+                            <button key={idx} className={`devv-btn ${!theme ? "text-white" : "text-black"}`}>{item}</button>
                         ))
                     }
                 </div>

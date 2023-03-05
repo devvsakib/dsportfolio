@@ -4,15 +4,12 @@ import './css/header.css'
 import MenuIcon from '@mui/icons-material/Menu';
 // import { FaMoon, FaSun } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { ThemeContext } from '../../context/themeContext';
+import { useContext } from 'react';
 
-const getThemeStatus = () => {
-    const savedTheme = localStorage.getItem('theme');
-    return savedTheme ? JSON.parse(savedTheme) : false;
-}
+
 const Header = () => {
-    const [theme, setTheme] = useState(getThemeStatus || false);
-    localStorage.setItem('theme', theme)
-    theme ? document.body.style.background = "white" : document.body.style.background = ""
+    const { theme, setTheme } = useContext(ThemeContext);
 
     const navElement = [
         { name: 'Home', link: '/' },
@@ -35,7 +32,6 @@ const Header = () => {
     useEffect(() => {
         if (screenSize < 768) {
             setMenuActive(false);
-            console.log(screenSize);
         } else {
             setMenuActive(true);
         }
