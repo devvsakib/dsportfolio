@@ -28,7 +28,7 @@ header {
   position: fixed;
   top: 10rem;
   left: -14rem;
-  z-index: 0 !important;
+  z-index: -1 !important;
   opacity: 0.3;
   border-radius: 50%;
   filter: blur(10rem);
