@@ -11,7 +11,7 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Layout from './components/Layout';
 import BGShape from './components/BGShape';
-import { ThemeContext } from './context/themeContext';
+import { ThemeContext } from './context/ThemeContext';
 
 const getThemeStatus = () => {
   const savedTheme = localStorage.getItem('theme');
