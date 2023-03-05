@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
 import './styles/style.css'
 import { useContext } from 'react';
-import { ThemeContext } from '../../context/themeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const ProjectCard = ({ project }) => {
     const { theme } = useContext(ThemeContext);
