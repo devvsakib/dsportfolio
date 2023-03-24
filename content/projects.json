@@ -29,6 +29,19 @@
         },
         {
             "name": "DevvSakib",
+            "title": "SocialProfile",
+            "thumb": "/assets/socialprofile.png",
+            "description": "A platform where user can create, share, update profile and view others profile with Authentication. Using React, Tailwind CSS and Vite",
+            "source_code": "https://github.com/devvsakib/social-profile",
+            "live_link": "https://social-profiles.vercel.app",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "/assets/vite.svg"
+            ]
+        },
+        {
+            "name": "DevvSakib",
             "title": "Weather App 2.0",
             "thumb": "/assets/weatherapp2.0.png",
             "description": "Realtime weather App. User able to see weather of any city with 7day forecast. Using React, Tailwind CSS and Vite",
