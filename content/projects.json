@@ -68,6 +68,19 @@
         },
         {
             "name": "DevvSakib",
+            "title": "Agency 2.0",
+            "thumb": "/assets/agency-website.png",
+            "description": "Digital Agency website build with React, Tailwind CSS.",
+            "source_code": "",
+            "live_link": "https://dsagency.netlify.app",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "/assets/vite.svg"
+            ]
+        },
+        {
+            "name": "DevvSakib",
             "title": "Hyer",
             "thumb": "/assets/hyerclone.png",
             "description": "An award winning website clone using pure HTML, CSS and JS.",
