@@ -54,10 +54,10 @@ function ContactForm() {
         setSending(true)
         if (validateForm()) {
             emailjs.sendForm(
-                'service_y7w2qwd',
-                'template_0655k3a',
+                import.meta.env.VITE_APP_MSG_TOKEN1,
+                import.meta.env.VITE_APP_MSG_TOKEN2,
                 form.current,
-                'VwSrtK4XrIkIF1zjr'
+                import.meta.env.VITE_APP_MSG_TOKEN3
             ).then((result) => {
                 if (result.status == 200) {
                     setMsgStatus(true);
@@ -76,7 +76,7 @@ function ContactForm() {
             setSending(false)
         }
     };
-    
+
     if (msgStatus === true) {
         document.getElementById("form").reset();
         setTimeout(() => {
