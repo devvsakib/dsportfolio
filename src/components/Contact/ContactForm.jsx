@@ -70,21 +70,16 @@ function ContactForm() {
                 setSending(false)
             });
         }
-        else {
-            setMsgStatus(!msgStatus);
-            notifyTimeout("❌ Please fill the form correctly!")
-            setSending(false)
-        }
     };
 
     if (msgStatus === true) {
         document.getElementById("form").reset();
         setTimeout(() => {
-            setMsgStatus(!msgStatus)
+            setMsgStatus(false)
         }, 2000);
     }
-    const notifyTimeout = (msg) => {
-        toast(msg)
+    const notifyTimeout = () => {
+        toast("✅ Message Sent Successfully!")
         return <ToastContainer limit={1} autoClose={2000}
             position="top-center"
         />
@@ -129,7 +124,7 @@ function ContactForm() {
                     }
                 </form>
                 {
-                    msgStatus && notifyTimeout("✅ Message Sent Successfully!")
+                    msgStatus && notifyTimeout()
                 }
             </div>
         </div>
