@@ -55,6 +55,19 @@
         },
         {
             "name": "DevvSakib",
+            "title": "Job Mania",
+            "thumb": "/assets/jobmaina.png",
+            "description": "A Job Portal website. User can apply for job, post job, view job details and many more. Using React, Tailwind CSS and Vite",
+            "source_code": "",
+            "live_link": "https://dsjobmania.netlify.app",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "/assets/vite.svg"
+            ]
+        },
+        {
+            "name": "DevvSakib",
             "title": "REST Countries API",
             "thumb": "/assets/restapicountry.png",
             "description": "REST countries API with color theme switcher. Using React, Tailwind CSS and Vite",
@@ -100,6 +113,19 @@
             "description": "Tesla website clone. Using React, Styled Components and Framer Motion",
             "source_code": "https://github.com/devvsakib/tesla-clone",
             "live_link": "https://tesla-clone-devvsakib.vercel.app",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/sass.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Tech Blog",
+            "thumb": "/assets/techblog.png",
+            "description": "Blog site build with React, Tailwind CSS and Vite",
+            "source_code": "",
+            "live_link": "https://dstechblog.vercel.app",
             "stack": [
                 "https://img.icons8.com/office/512/react.png",
                 "https://img.icons8.com/color/512/tailwindcss.png",
