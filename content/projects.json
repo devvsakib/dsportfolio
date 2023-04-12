@@ -56,7 +56,7 @@
         {
             "name": "DevvSakib",
             "title": "Job Mania",
-            "thumb": "/assets/jobmaina.png",
+            "thumb": "/assets/jobmania.png",
             "description": "A Job Portal website. User can apply for job, post job, view job details and many more. Using React, Tailwind CSS and Vite",
             "source_code": "",
             "live_link": "https://dsjobmania.netlify.app",
