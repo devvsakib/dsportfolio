@@ -5,7 +5,7 @@ import Notice from '../components/Notice/Notice'
 const Home = () => {
     return (
         <div className='md:h-[70vh] sm:h-auto flex items-center'>
-            <Notice />
+            {/* <Notice /> */}
             <HeroSection />
         </div>
     )
