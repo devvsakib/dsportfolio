@@ -2,6 +2,46 @@
     "projects": [
         {
             "name": "DevvSakib",
+            "title": "MusicFrame",
+            "thumb": "/assets/musicframe.png",
+            "description": "A summer club online platform. Student can enroll and pay for course, Instructor able to publish their class. Dashboard for student, instructors, admin.",
+            "source_code": "https://github.com/devvsakib/musicframe",
+            "live_link": "https://musicframe.vercel.app",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/nodejs.png",
+                "/assets/express-js.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "CarToyLand",
+            "thumb": "/assets/cartoyland.png",
+            "description": "E-commerce website for toy cars. Seller can sell toy, delete etc.",
+            "source_code": "https://github.com/devvsakib/cartoyland",
+            "live_link": "https://cartoyland.vercel.app",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/nodejs.png",
+                "/assets/express-js.png"
+            ]
+        },
+        {
+            "name": "DevvSakib",
+            "title": "Ocean&Us",
+            "thumb": "/assets/oceanus.png",
+            "description": "Ocean & Us is a beautiful website created using react, tailwindcss.",
+            "source_code": "https://github.com/devvsakib/ocean_project",
+            "live_link": "https://oceanus.vercel.app",
+            "stack": [
+                "https://img.icons8.com/office/512/react.png",
+                "https://img.icons8.com/color/512/tailwindcss.png",
+                "/assets/vite.svg"
+            ]
+        }, {
+            "name": "DevvSakib",
             "title": "PowerTheWeb",
             "thumb": "/assets/powertheweb.png",
             "description": "An opensource project to help people with vast projects and resources.",
