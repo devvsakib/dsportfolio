@@ -27,7 +27,6 @@ const ProjectCard = ({ project }) => {
                 delay: 0.2,
                 ease: [.5, 0.71, .7, 1.2]
             }}
-            loading="lazy"
             className="project-card w-[100%] p-3 z-10 rounded-md bg-[#AD30FA]/20 shadow-md backdrop-blur-md backdrop-brightness-100 drop-shadow-2xl shadow-[#AD30FA]/40">
             <div className="z-99999 grid grid-flow-col gap-2 rounded-md bg-transparent overflow-hidden z-10 items-start">
                 {/* vertical stack icon */}
@@ -36,9 +35,10 @@ const ProjectCard = ({ project }) => {
                         {
                             project.stack.map((tech, idx) => (
                                 <motion.img
+                                    loading="lazy"
                                     whileHover={{ scale: 1.5 }}
                                     key={idx}
-                                    src={tech} srcSet=''
+                                    src={tech}
                                     className='w-6 cursor-pointer' />
                                 // <motion.span
                                 // initial={{
@@ -61,7 +61,7 @@ const ProjectCard = ({ project }) => {
                         }
                     </div>
                 </div>
-                <img src={project.thumb} alt="" srcSet="" className="object-fit skeleton object-cover object-center thumbnail" />
+                <img loading="lazy" src={project.thumb} alt={project.title} className="object-fit skeleton object-cover object-center thumbnail" />
             </div>
             <div className="project-card__content bg-transparent">
                 <h2 className="text-2xl mt-3 text-white projectTitle uppercase font-semibold">{project.title}</h2>
