@@ -27,6 +27,7 @@ const ProjectCard = ({ project }) => {
                 delay: 0.2,
                 ease: [.5, 0.71, .7, 1.2]
             }}
+            loading="lazy"
             className="project-card w-[100%] p-3 z-10 rounded-md bg-[#AD30FA]/20 shadow-md backdrop-blur-md backdrop-brightness-100 drop-shadow-2xl shadow-[#AD30FA]/40">
             <div className="z-99999 grid grid-flow-col gap-2 rounded-md bg-transparent overflow-hidden z-10 items-start">
                 {/* vertical stack icon */}
