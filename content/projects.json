@@ -69,14 +69,15 @@
         },
         {
             "name": "DevvSakib",
-            "title": "SocialProfile",
-            "thumb": "/assets/socialprofile.png",
-            "description": "A platform where user can create, share, update profile and view others profile with Authentication. Using React, Tailwind CSS and Vite",
-            "source_code": "https://github.com/devvsakib/social-profile",
-            "live_link": "https://social-profiles.vercel.app",
+            "title": "Culinary Central",
+            "thumb": "/assets/culinarycentral.png",
+            "description": "France restaurant website with Firebase Authentication. Using React, TailwindCSS and Vite",
+            "source_code": "https://github.com/devvsakib/culinarycentral-backend",
+            "live_link": "https://culinarycentral.netlify.app",
             "stack": [
                 "https://img.icons8.com/office/512/react.png",
                 "https://img.icons8.com/color/512/tailwindcss.png",
+                "https://img.icons8.com/color/512/firebase.png",
                 "/assets/vite.svg"
             ]
         },
