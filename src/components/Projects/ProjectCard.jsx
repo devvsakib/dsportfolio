@@ -61,7 +61,13 @@ const ProjectCard = ({ project }) => {
                         }
                     </div>
                 </div>
-                <img loading="lazy" src={project.thumb} alt={project.title} className="object-fit skeleton object-cover object-center thumbnail" />
+                <div className='relative'>
+                    <img loading="lazy" src={project.thumb} alt={project.title} className="object-fit skeleton object-cover object-center thumbnail" />
+                    {
+                        project.current_status &&
+                        <span title='Building in progresss' className={`absolute top-2 right-1 ${!theme ? "text-teal-50":"" }  bg-white/20  px-3 rounded-2xl text-sm backdrop-blur-lg py-1`}>{project.current_status}</span>
+                    }
+                </div>
             </div>
             <div className="project-card__content bg-transparent">
                 <h2 className="text-2xl mt-3 text-white projectTitle uppercase font-semibold">{project.title}</h2>
