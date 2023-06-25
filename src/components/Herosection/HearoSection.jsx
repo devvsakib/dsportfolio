@@ -8,7 +8,7 @@ const HeroSection = () => {
             <section className='z-99 hero-sec p-0 h-[60vh]'>
                 <div className='lg:w-[1200px] w-auto mx-auto'>
                     <div className='text-[#AD30FA]'><span className='text-[#FFF506]'>{'('}</span>{'function()'}<span className='text-[#FFF506]'>{'{'}</span>
-                        <div className='sm:pl-[5rem] pl-4 sm:py-10 py-3'>
+                        <div className='sm:pl-[5rem] sm:py-10 py-3'>
                             <table className='table-auto'>
                                 <tbody>
                                     <tr><td><span className='text-[#07C5D1]'>greeting</span></td><td><span className='text-[#E02AAD] mx-6'>=</span></td><td><span className='text-[#A026FF]'><span className='quat'>"</span>Hi! Im<span className='quat'> "</span></span></td></tr>

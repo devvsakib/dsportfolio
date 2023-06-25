@@ -27,7 +27,7 @@ const ProjectCard = ({ project }) => {
                 delay: 0.2,
                 ease: [.5, 0.71, .7, 1.2]
             }}
-            className="project-card w-[100%] p-3 z-10 rounded-md bg-[#AD30FA]/20 shadow-md backdrop-blur-md backdrop-brightness-100 drop-shadow-2xl shadow-[#AD30FA]/40">
+            className="relative overflow-hidden project-card w-[100%] p-3 z-10 rounded-md bg-[#AD30FA]/20 shadow-md backdrop-blur-md backdrop-brightness-100 drop-shadow-2xl shadow-[#AD30FA]/40">
             <div className="z-99999 grid grid-flow-col gap-2 rounded-md bg-transparent overflow-hidden z-10 items-start">
                 {/* vertical stack icon */}
                 <div className={`hidden md:block bg-transparent`}>
@@ -65,7 +65,9 @@ const ProjectCard = ({ project }) => {
                     <img loading="lazy" src={project.thumb} alt={project.title} className="object-fit skeleton object-cover object-center thumbnail" />
                     {
                         project.current_status &&
-                        <span title='Building in progresss' className={`absolute top-2 right-1 ${!theme ? "text-teal-50":"" }  bg-white/20  px-3 rounded-2xl text-sm backdrop-blur-lg py-1`}>{project.current_status}</span>
+                        <span title='Building in progresss' className={`absolute top-2 right-1 ${!theme ? "text-teal-50" : ""}  bg-white/20  px-3 rounded-2xl text-sm backdrop-blur-lg py-1`}>
+                            {project.current_status}
+                        </span>
                     }
                 </div>
             </div>
@@ -114,6 +116,10 @@ const ProjectCard = ({ project }) => {
                             Code</a></motion.button>
                 </div>
             </div>
+            {
+                project.current_status &&
+                <img className="absolute -bottom-16 opacity-10 -z-10 h-60 w-full left-0" src="/assets/inprogress.png" />
+            }
         </motion.div>
     )
 }

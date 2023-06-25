@@ -110,7 +110,7 @@
         },
         {
             "name": "DevvSakib",
-            "title": "REST Countries API",
+            "title": "REST Countries",
             "thumb": "/assets/restapicountry.png",
             "description": "REST countries API with color theme switcher. Using React, Tailwind CSS and Vite",
             "source_code": "https://github.com/devvsakib/frontendmentor.io/tree/main/rest-countries-api",
