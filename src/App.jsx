@@ -9,6 +9,7 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import Flickr from './pages/Flickr';
 import Layout from './components/Layout';
 import BGShape from './components/BGShape';
 import { ThemeContext } from './context/ThemeContext';
@@ -38,6 +39,7 @@ function App() {
           <Route exact path='/contact' element={<Contact />} />
           <Route path='/*' element={<NotFound />} />
           <Route path='/secret' element={<NotFound />} />
+          <Route path='/flickr' element={<Flickr />} />
         </Routes>
       </ThemeContext.Provider>
     </Layout>
