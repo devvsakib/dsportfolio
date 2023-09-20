@@ -1,5 +1,5 @@
 const Stack = ({ theme }) => {
-    const stacksFrontend = ["React", "JavaScript", "HTML5", "CSS3", "Tailwind", "Bootstrap", "Sass"]
+    const stacksFrontend = ["React", "JavaScript", "HTML5", "CSS3", "Tailwind", "Bootstrap", "Sass", "Ant Design"]
     const stacksBackend = ["Node.js", "Express", "MongoDB", "RestAPI"]
     return (
 
