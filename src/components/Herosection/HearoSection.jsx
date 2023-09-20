@@ -13,6 +13,7 @@ const HeroSection = () => {
                                 <tbody>
                                     <tr><td><span className='text-[#07C5D1]'>greeting</span></td><td><span className='text-[#E02AAD] mx-6'>=</span></td><td><span className='text-[#A026FF]'><span className='quat'>"</span>Hi! Im<span className='quat'> "</span></span></td></tr>
                                     <tr><td><span className='text-[#07C5D1]'>name</span></td><td><span className='text-[#E02AAD] mx-6'>=</span></td><td><span className='devvsakib'>"Sakib Ahmed"</span></td></tr>
+                                    <tr className='-mt-5'><td><span className='text-[cc]'>cj</span></td><td><span className='text-[#E02AAD] mx-6'>=</span></td><td><span className='text-[#AD62F8] intro'><span className='quat'>"</span>Frontend Developer at <span className='text-[#07d1c0]'><a href="https://shunyeka.com">ShunyEka System Private LTM</a></span> <span className='quat'> "</span></span></td></tr>
                                     <tr><td><span className='text-[cc]'>intro</span></td><td><span className='text-[#E02AAD] mx-6'>=</span></td><td><span className='text-[#AD62F8] intro'><span className='quat'>"</span>Frontend Developer | WordPress Expert | Open-source Advocate. Learning is the key of success. Help other, Learn more. <span className='quat'> "</span></span></td></tr>
                                 </tbody>
                             </table>
