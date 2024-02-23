@@ -10,7 +10,7 @@ const SocialLinks = ({ theme }) => {
                     </span>
                 </div>
             </a>
-            <a href="https://linkedin.com/in/sakibdevv" target="_blank" className="">
+            <a href="https://linkedin.com/in/sakibahmed5" target="_blank" className="">
                 <div className="flex gap-2 flex-col items-center bg-white devv-icon p-5 py-3 rounded-lg ">
                     <FaLinkedin className={`${!theme ? "text-white" : "text-[#a60cff]"} md:text-3xl`} />
                     <span className='text-sm'>
