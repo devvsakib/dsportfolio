@@ -26,7 +26,7 @@ const Details = ({ theme }) => {
                 </div>
                 <div className="text-center md:col-span-2  mt-3 flex justify-center t">
                     <button className={`gap-3 flex items-center justify-center devv-btn px-5 py-2 rounded  devv-btn ${!theme ? "text-white" : "text-black"}  shadow-black/60 shadow-md`}>
-                        <a href="/assets/devvsakib.pdf" download>
+                        <a href="/assets/SAKIB AHMED CV.pdf" download>
                             RESUME
                         </a>
                         <FaDownload />
