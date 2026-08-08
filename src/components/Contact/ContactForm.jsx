@@ -1,9 +1,11 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useContext } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ThemeContext } from '../../context/ThemeContext';
 
 function ContactForm() {
+  const { theme } = useContext(ThemeContext);
   const form = useRef();
   const [sending, setSending] = useState(false);
   const [formData, setFormData] = useState({
@@ -72,6 +74,12 @@ function ContactForm() {
       );
   };
 
+  const inputStyle = `w-full outline-none rounded-lg px-4 py-3 font-normal transition-colors border ${
+    theme
+      ? 'bg-slate-100 text-slate-900 border-slate-300 placeholder-slate-400 focus:border-cyan-500'
+      : 'bg-white/10 text-white border-white/10 placeholder-gray-400 focus:border-cyan-400 backdrop-blur-md'
+  }`;
+
   return (
     <div className="mx-auto w-full md:w-[60vw] lg:w-[50vw] text-center px-4">
       <ToastContainer limit={1} autoClose={2000} position="top-center" />
@@ -85,44 +93,38 @@ function ContactForm() {
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
         <div>
           <input
-            className={`w-full outline-none rounded-lg px-4 py-3 font-normal text-white bg-white/10 backdrop-blur-md border ${
-              formErrors.user_name ? 'border-red-500' : 'border-white/10 focus:border-cyan-400'
-            } transition-colors placeholder-gray-400`}
+            className={`${inputStyle} ${formErrors.user_name ? '!border-red-500' : ''}`}
             type="text"
             name="user_name"
             value={formData.user_name}
             placeholder="Enter your Full Name"
             onChange={(e) => setFormData({ ...formData, user_name: e.target.value })}
           />
-          {formErrors.user_name && <p className="text-red-400 text-xs text-left mt-1 pl-1">{formErrors.user_name}</p>}
+          {formErrors.user_name && <p className="text-red-500 text-xs text-left mt-1 pl-1 font-medium">{formErrors.user_name}</p>}
         </div>
 
         <div>
           <input
-            className={`w-full outline-none rounded-lg px-4 py-3 font-normal text-white bg-white/10 backdrop-blur-md border ${
-              formErrors.user_email ? 'border-red-500' : 'border-white/10 focus:border-cyan-400'
-            } transition-colors placeholder-gray-400`}
+            className={`${inputStyle} ${formErrors.user_email ? '!border-red-500' : ''}`}
             type="email"
             name="user_email"
             placeholder="Enter your Email"
             value={formData.user_email}
             onChange={(e) => setFormData({ ...formData, user_email: e.target.value })}
           />
-          {formErrors.user_email && <p className="text-red-400 text-xs text-left mt-1 pl-1">{formErrors.user_email}</p>}
+          {formErrors.user_email && <p className="text-red-500 text-xs text-left mt-1 pl-1 font-medium">{formErrors.user_email}</p>}
         </div>
 
         <div>
           <textarea
-            className={`w-full outline-none rounded-lg px-4 py-3 font-normal text-white bg-white/10 backdrop-blur-md border ${
-              formErrors.message ? 'border-red-500' : 'border-white/10 focus:border-cyan-400'
-            } transition-colors placeholder-gray-400 resize-none`}
+            className={`${inputStyle} resize-none ${formErrors.message ? '!border-red-500' : ''}`}
             rows={5}
             name="message"
             placeholder="Message"
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           />
-          {formErrors.message && <p className="text-red-400 text-xs text-left mt-1 pl-1">{formErrors.message}</p>}
+          {formErrors.message && <p className="text-red-500 text-xs text-left mt-1 pl-1 font-medium">{formErrors.message}</p>}
         </div>
 
         <button

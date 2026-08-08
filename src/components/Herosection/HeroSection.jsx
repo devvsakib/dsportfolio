@@ -1,12 +1,31 @@
+const developerDetails1 = {
+  greeting: "Hi! I'm",
+  name: "MD. SAKIB AHMED",
+  role: "Software Engineer & Full-Stack Developer",
+  skills: [
+    "JavaScript",
+    "React",
+    "Tailwind CSS",
+    "Python",
+    "FastAPI",
+    "PostgreSQL",
+    "WordPress / WooCommerce",
+  ],
+  bio: "Building high-performance web applications, modern APIs, and custom enterprise e-commerce solutions.",
+};
+import { useContext } from 'react';
 import { motion } from 'framer-motion';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const HeroSection = () => {
+  const { theme } = useContext(ThemeContext);
+
   const developerDetails = {
     greeting: "Hi! I'm",
     name: "MD. SAKIB AHMED",
-    role: "Software Engineer & Full-Stack Developer",
+    company: "ShunyEka Systems Private Limited",
+    role: "Frontend Developer & Software Engineer",
     skills: [
-      "JavaScript",
       "React",
       "Tailwind CSS",
       "Python",
@@ -14,26 +33,30 @@ const HeroSection = () => {
       "PostgreSQL",
       "WordPress / WooCommerce",
     ],
-    bio: "Building high-performance web applications, modern APIs, and custom enterprise e-commerce solutions.",
+    bio: "Focused on modern React applications, high-performance Python backends, and custom WooCommerce enterprise setups.",
   };
 
   return (
     <section className="relative z-10 w-full min-h-[70vh] flex items-center justify-center py-8">
-      <div className="w-full max-w-5xl mx-auto px-4">
+      <div className="w-full max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-          className="rounded-2xl border border-white/10 bg-slate-950/60 backdrop-blur-xl shadow-2xl p-6 md:p-8 font-mono"
+          className={`rounded-2xl border backdrop-blur-xl p-6 md:p-8 font-mono transition-colors duration-300 ${
+            theme
+              ? 'bg-slate-900 border-slate-700 shadow-2xl shadow-slate-300'
+              : 'bg-slate-950/60 border-white/10 shadow-2xl'
+          }`}
         >
-          {/* Terminal Window Header */}
-          <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
+          {/* Terminal Header */}
+          <div className={`flex items-center justify-between mb-6 border-b pb-4 ${theme ? 'border-slate-700' : 'border-white/10'}`}>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-red-500/80" />
               <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
               <div className="w-3 h-3 rounded-full bg-green-500/80" />
-              <span className="ml-2 text-xs text-gray-400 font-sans hidden sm:inline">
-                devvsakib ~ profile.js
+              <span className={`ml-2 text-xs font-sans hidden sm:inline ${theme ? 'text-gray-400' : 'text-gray-400'}`}>
+                devvsakib ~ profile.ts
               </span>
             </div>
             <span className="text-xs text-cyan-400 font-sans">
@@ -58,6 +81,12 @@ const HeroSection = () => {
               <div>
                 <span className="text-cyan-300">name: </span>
                 <span className="text-yellow-400 font-bold">"{developerDetails.name}"</span>,
+              </div>
+              <div>
+                <span className="text-cyan-300">company: </span>
+                <span className="text-cyan-400">
+                  "<a href="https://shunyeka.com" target="_blank" rel="noreferrer" className="hover:underline">{developerDetails.company}</a>"
+                </span>,
               </div>
               <div>
                 <span className="text-cyan-300">role: </span>
@@ -90,7 +119,7 @@ const HeroSection = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="mt-8 flex flex-wrap gap-4 pt-6 border-t border-white/10 font-sans">
+          <div className={`mt-8 flex flex-wrap gap-4 pt-6 border-t font-sans ${theme ? 'border-slate-700' : 'border-white/10'}`}>
             <a
               href="/projects"
               className="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition-all duration-200 shadow-lg shadow-cyan-500/20"
