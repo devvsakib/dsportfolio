@@ -13,6 +13,7 @@ import Flickr from './pages/Flickr';
 import Layout from './components/Layout';
 import BGShape from './components/BGShape';
 import { ThemeContext } from './context/ThemeContext';
+import CursorGlow from "./components/CursorGlow";
 
 const getThemeStatus = () => {
   const savedTheme = localStorage.getItem('theme');
@@ -41,6 +42,7 @@ function App() {
           <Route path='/secret' element={<NotFound />} />
           <Route path='/flickr' element={<Flickr />} />
         </Routes>
+        <CursorGlow/>
       </ThemeContext.Provider>
     </Layout>
   );
