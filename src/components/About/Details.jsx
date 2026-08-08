@@ -1,45 +1,71 @@
-import Stack from "./Stack"
-import SocialLinks from '../SocialLinks/SocialLinks'
-import { FaDownload } from 'react-icons/fa'
+import Stack from "./Stack";
+import SocialLinks from "../SocialLinks/SocialLinks";
+import { FaDownload } from "react-icons/fa";
+
 const Details = ({ theme }) => {
-    return (
-        <div className="mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1  items-center gap-10">
-
-                <div className="justify-center">
-                    <div className="rounded-full overflow-hidden bg-gradient-to-r  via-[#ffe700]/5 from-[#851EED]/5 to-[#07C5D1]/5 devv-bg">
-                        <img className="w-1/2 mx-auto rounded-full devv-img-skeleton h-auto" src="https://avatars.githubusercontent.com/u/88339569?v=4" alt="DevvSakib didn't loaded ☹️" />
-                    </div>
-                </div>
-                <div className={`text-md tracking-wider z-[9999] font-[poppins]`}>
-                    <div className={`${!theme ? "" : "text-black"}`}>
-                        <p className="mb-3">I am a <span>Frontend Developer</span> with a working proficiency in React, HTML, CSS, JavaScript. Contributting to Open-Source daily. Open-source is the best way to connect with new people and it help to gain more knowledge.</p>
-                        <p className="mb-2">I have a solid understanding of Tailwind, Bootstrap, SASS, and Git Version. I am currently building cool things to expand my experience.</p>
-                        <p>Currently working at
-                            <span className='text-[#07d1c0]'> <a href="https://shunyeka.com"> ShunyEka System Private LTM </a> </span>
-                            as an Intern Frontend Developer.
-                        </p>
-                    </div>
-                    <div className="mt-5 devv-bg p-5 rounded-lg shadow-lg">
-                        <p className="devvTextAnimation">Looking for the right opportunity. If you want you can contact with me.</p>
-                    </div>
-                </div>
-                <div className="text-center md:col-span-2  mt-3 flex justify-center t">
-                    <button className={`gap-3 flex items-center justify-center devv-btn px-5 py-2 rounded  devv-btn ${!theme ? "text-white" : "text-black"}  shadow-black/60 shadow-md`}>
-                        <a href="/assets/SAKIB AHMED CV.pdf" download>
-                            RESUME
-                        </a>
-                        <FaDownload />
-                    </button>
-                </div>
-                <SocialLinks theme={theme} />
-            </div>
-            <div className="text-center  mt-40">
-                <h2 className="devv-title text-3xl md:text-6xl inline">Stacks</h2>
-                <Stack theme={theme} />
-            </div>
+  return (
+    <div className="mt-10 px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+        <div className="flex justify-center">
+          <div className="rounded-full p-2 bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 shadow-xl">
+            <img
+              className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-2 border-white/20"
+              src="https://avatars.githubusercontent.com/u/88339569?v=4"
+              alt="MD. SAKIB AHMED"
+            />
+          </div>
         </div>
-    )
-}
 
-export default Details
+        <div className={`text-md tracking-wider font-sans space-y-4 ${theme ? "text-slate-900" : "text-gray-200"}`}>
+          <p>
+            I am a <span className="font-semibold text-cyan-400">Software Engineer & WordPress Specialist</span> focused on modern React web applications, high-performance Python backends, and robust WooCommerce enterprise setups.
+          </p>
+          <p>
+            Currently working at{" "}
+            <a
+              href="https://shunyeka.com"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-cyan-400 hover:underline"
+            >
+              ShunyEka Systems Private Limited
+            </a>{" "}
+            as a Software Engineer, while building full-stack applications using React, Tailwind CSS, Python (FastAPI), PostgreSQL, REST APIs, and custom WordPress solutions.
+          </p>
+          
+          <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md shadow-lg">
+            <p className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent font-medium animate-pulse">
+              Open for full-stack engineering opportunities, high-performance API development, and custom WordPress projects.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center md:col-span-2 mt-3 flex justify-center">
+          <a
+            href="/assets/SAKIB AHMED CV.pdf"
+            download
+            className={`flex items-center gap-3 px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-md ${
+              theme
+                ? "bg-slate-900 text-white hover:bg-slate-800"
+                : "bg-gradient-to-r from-purple-600 to-cyan-500 text-white hover:shadow-cyan-500/25"
+            }`}
+          >
+            <span>DOWNLOAD RESUME</span>
+            <FaDownload />
+          </a>
+        </div>
+
+        <SocialLinks theme={theme} />
+      </div>
+
+      <div className="text-center mt-28">
+        <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          Tech Stack
+        </h2>
+        <Stack theme={theme} />
+      </div>
+    </div>
+  );
+};
+
+export default Details;

@@ -1,23 +1,21 @@
-import { useParams, Link } from 'react-router-dom'
-import { useState, useEffect } from "react";
-import './css/header.css'
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect, useContext } from "react";
+import './css/header.css';
 import MenuIcon from '@mui/icons-material/Menu';
-// import { FaMoon, FaSun } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { ThemeContext } from '../../context/ThemeContext';
-import { useContext } from 'react';
-
 
 const Header = () => {
     const { theme, setTheme } = useContext(ThemeContext);
+    const location = useLocation();
 
     const navElement = [
         { name: 'Home', link: '/' },
         { name: 'Projects', link: '/projects' },
         { name: 'Blog', link: '/blog' },
         { name: 'About', link: '/about' },
-        // { name: 'NF Test', link: '/notfound' },
-        { name: 'Contact', link: '/contact' }]
+        { name: 'Contact', link: '/contact' }
+    ];
 
     const [alertMsg, setAlertMsg] = useState(false);
     const [menuActive, setMenuActive] = useState(false);
@@ -29,6 +27,7 @@ const Header = () => {
         handleResize();
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
     useEffect(() => {
         if (screenSize < 768) {
             setMenuActive(false);
@@ -38,98 +37,113 @@ const Header = () => {
     }, [screenSize]);
 
     useEffect(() => {
-        setTimeout(() => {
-            setAlertMsg(!alertMsg);
+        const timer = setTimeout(() => {
+            setAlertMsg((prev) => !prev);
         }, 6000);
-    }, [])
+        return () => clearTimeout(timer);
+    }, []);
 
-
-    if (alertMsg) {
-        setTimeout(() => {
-            setAlertMsg(!alertMsg);
-        }, 3500);
-    }
+    useEffect(() => {
+        if (alertMsg) {
+            const hideTimer = setTimeout(() => {
+                setAlertMsg(false);
+            }, 3500);
+            return () => clearTimeout(hideTimer);
+        }
+    }, [alertMsg]);
 
     return (
-        <header className='flex z-99999 justify-between items-center relative p-0 py-5'>
-            <div className="logo">
+        <header className='flex z-50 justify-between items-center relative p-0 py-5'>
+            {/* <div className="logo z-50">
                 <Link to="/">
-                    <img src="assets/Logo.png" alt="DevvSakib Logo" />
+                    <img src="assets/Logo.png" alt="DevvSakib Logo" className="h-8 md:h-10 object-contain" />
                 </Link>
-            </div>
-
+            </div> */}
+            
             <div
-                className={`nav  transition delay-150 ease-in-out ${menuActive ? "" : "hidden"} `}
+                className={`fixed md:relative top-0 left-0 w-full h-screen md:h-auto bg-slate-950/90 md:bg-transparent backdrop-blur-2xl md:backdrop-blur-none flex flex-col md:flex-row items-center justify-center transition-all duration-300 ease-in-out z-40 ${
+                    menuActive ? "opacity-100 translate-x-0 pointer-events-auto" : "opacity-0 -translate-x-full md:translate-x-0 md:opacity-100 pointer-events-none md:pointer-events-auto"
+                }`}
             >
+                {/* Mobile Menu Close Button */}
                 <button
-                    className="text-3xl text-white md:hidden mb-4 closeBTN"
+                    className="absolute top-6 right-8 text-2xl text-gray-400 hover:text-white md:hidden w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md transition-all"
                     onClick={() => setMenuActive(!menuActive)}
+                    aria-label="Close menu"
                 >
-                    x
+                    ✕
                 </button>
-                <div className="flex list-none flex-col items-center justify-center gap-[2rem] md:flex-row md:gap-[0.6rem] menu">
-                    {navElement.map((e, key) => (
-                        <Link to={e.link} key={key} className="navitem ml-4 hover:text-[#07C5D1] transition-colors delay-75 ease-in-out uppercase"
-                        >
-                            {
-                                screenSize < 768 ? (
-                                    <p
-                                        onClick={() => setMenuActive(!menuActive)}
-                                    >
-                                        {e.name}
-                                    </p>
-                                ) : (
-                                    <p>
-                                        {e.name}
-                                    </p>
-                                )
-                            }
 
-                        </Link>
-                    ))}
-                    {/* <button className='ml-4' onClick={() => setTheme(!theme)}> */}
-                    {/* {theme ? <FaSun /> : <FaMoon />} */}
-                    {/* <img src={!theme ? "/assets/lightcat.png" : "/assets/darkcat.png"} className='w-8' alt="" /> */}
-                    {/* </button> */}
+                <div className="flex list-none flex-col items-center justify-center gap-8 md:flex-row md:gap-6 menu">
+                    {navElement.map((e, key) => {
+                        const isActive = location.pathname === e.link;
+                        return (
+                            <Link
+                                to={e.link}
+                                key={key}
+                                onClick={() => screenSize < 768 && setMenuActive(false)}
+                                className={`relative navitem text-xl md:text-sm font-semibold tracking-widest uppercase transition-all duration-200 ${
+                                    isActive
+                                        ? "text-[#07C5D1] font-bold"
+                                        : "text-gray-300 hover:text-[#07C5D1]"
+                                }`}
+                            >
+                                <p>{e.name}</p>
+                                {/* Active Underline Indicator */}
+                                {isActive && (
+                                    <motion.div
+                                        layoutId="activeNavIndicator"
+                                        className="absolute -bottom-1 left-0 w-full h-[2px] bg-[#07C5D1] rounded-full shadow-[0_0_8px_#07C5D1]"
+                                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                                    />
+                                )}
+                            </Link>
+                        );
+                    })}
                 </div>
             </div>
+
+            {/* Hamburger Button */}
             <button
-                className="hamburger"
+                className="hamburger md:hidden z-50 p-2 focus:outline-none"
                 onClick={() => setMenuActive(!menuActive)}
+                aria-label="Toggle menu"
             >
-                <MenuIcon className="text-[#07C5D1]" />
+                <MenuIcon className="text-[#07C5D1] !text-3xl" />
             </button>
+
+            {/* Floating Theme Switcher */}
             <motion.button
                 drag="y"
                 dragTransition={{ bounceStiffness: 800, bounceDamping: 10 }}
                 dragConstraints={{ left: 0, right: 0, top: -400, bottom: 10 }}
                 whileDrag={{ scale: 1.2 }}
-                whileHover={{
-                    scale: 1.05,
-                }}
+                whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
-
-                className='fixed -left-0 bottom-0 w-28'
+                className='fixed -left-0 bottom-0 w-28 z-50'
                 onClick={() => setTheme(!theme)}
                 aria-label="ThemeBtn"
                 id="themeSwitcher"
             >
-                {
-                    alertMsg ? (
-                        <motion.span
-                            initial={{ opacity: 0, y: 15 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 25 }}
-                            whileInView={{ scale: [0, 1.1] }}
-                            transition={{ duration: .5, ease: "easeInOut", type: "spring", stiffness: 500, damping: 30 }}
-                        >{theme ? "Dark Theme?" : "Light Theme?"}</motion.span>
-                    ) : null
-                }
-                <img src={theme ? "/assets/test.png" : "/assets/test2.png"} className={`${theme ? 'rotate-0' : 'rotate-6'} 
-                 origin-top-right w-16 z-10 transition-all ease-linear duration-500`} alt="" />
+                {alertMsg ? (
+                    <motion.span
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 25 }}
+                        whileInView={{ scale: [0, 1.1] }}
+                        transition={{ duration: .5, ease: "easeInOut", type: "spring", stiffness: 500, damping: 30 }}
+                    >
+                        {theme ? "Dark Theme?" : "Light Theme?"}
+                    </motion.span>
+                ) : null}
+                <img
+                    src={theme ? "/assets/test.png" : "/assets/test2.png"}
+                    className={`${theme ? 'rotate-0' : 'rotate-6'} origin-top-right w-16 z-10 transition-all ease-linear duration-500`}
+                    alt="Theme Mascot"
+                />
             </motion.button>
-        </header >
-    )
-}
+        </header>
+    );
+};
 
-export default Header
+export default Header;

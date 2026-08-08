@@ -1,7 +1,7 @@
 import Details from "../components/About/Details"
 const About = ({ theme }) => {
     return (
-        <div className="mb-10">
+        <div className="my-14">
             <Details theme={theme} />
             <div className="circle -z-[99999]"></div>
             <div className="circle -z-[99999] c2"></div>

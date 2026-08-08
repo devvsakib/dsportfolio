@@ -1,45 +1,113 @@
-import './css/herosection.css'
+import { motion } from 'framer-motion';
+
 const HeroSection = () => {
-    return (
-        <>
-            <div className="circle"></div>
-            <div className="circle c2"></div>
-            <div className="circle c3"></div>
-            <section className='z-99 hero-sec p-0 h-[60vh]'>
-                <div className='lg:w-[1200px] w-auto mx-auto'>
-                    <div className='text-[#AD30FA]'><span className='text-[#FFF506]'>{'('}</span>{'function()'}<span className='text-[#FFF506]'>{'{'}</span>
-                        <div className='sm:pl-[5rem] sm:py-10 py-3'>
-                            <table className='table-auto'>
-                                <tbody>
-                                    <tr><td><span className='text-[#07C5D1]'>greeting</span></td><td><span className='text-[#E02AAD] mx-6'>=</span></td><td><span className='text-[#A026FF]'><span className='quat'>"</span>Hi! Im<span className='quat'> "</span></span></td></tr>
-                                    <tr><td><span className='text-[#07C5D1]'>name</span></td><td><span className='text-[#E02AAD] mx-6'>=</span></td><td><span className='devvsakib'>"MD.SAKIB AHMED"</span></td></tr>
-                                    <tr className='-mt-5'><td><span className='text-[cc]'>cj</span></td><td><span className='text-[#E02AAD] mx-6'>=</span></td><td><span className='text-[#AD62F8] intro'><span className='quat'>"</span>Frontend Developer at <span className='text-[#07d1c0]'><a href="https://shunyeka.com" target="_black">ShunyEka Systems Private Limited</a></span> <span className='quat'> "</span></span></td></tr>
-                                    <tr><td><span className='text-[cc]'>intro</span></td><td><span className='text-[#E02AAD] mx-6'>=</span></td><td><span className='text-[#AD62F8] intro'><span className='quat'>"</span>Frontend Developer | WordPress Expert | Open-source Advocate. Learning is the key of success. Help other, Learn more. <span className='quat'> "</span></span></td></tr>
-                                </tbody>
-                            </table>
+  const developerDetails = {
+    greeting: "Hi! I'm",
+    name: "MD. SAKIB AHMED",
+    role: "Software Engineer & Full-Stack Developer",
+    skills: [
+      "JavaScript",
+      "React",
+      "Tailwind CSS",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "WordPress / WooCommerce",
+    ],
+    bio: "Building high-performance web applications, modern APIs, and custom enterprise e-commerce solutions.",
+  };
 
-                        </div>
-                        <span className='text-[#FFF506]'>{'})()'}</span></div>
+  return (
+    <section className="relative z-10 w-full min-h-[70vh] flex items-center justify-center py-8">
+      <div className="w-full max-w-5xl mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          className="rounded-2xl border border-white/10 bg-slate-950/60 backdrop-blur-xl shadow-2xl p-6 md:p-8 font-mono"
+        >
+          {/* Terminal Window Header */}
+          <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-red-500/80" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+              <div className="w-3 h-3 rounded-full bg-green-500/80" />
+              <span className="ml-2 text-xs text-gray-400 font-sans hidden sm:inline">
+                devvsakib ~ profile.js
+              </span>
+            </div>
+            <span className="text-xs text-cyan-400 font-sans">
+              Status: Available
+            </span>
+          </div>
+
+          {/* Terminal Body */}
+          <div className="space-y-4 text-sm md:text-base leading-relaxed">
+            <div>
+              <span className="text-purple-400">const </span>
+              <span className="text-cyan-400">developer </span>
+              <span className="text-pink-500">= </span>
+              <span className="text-yellow-300">&#123;</span>
+            </div>
+
+            <div className="pl-6 space-y-2">
+              <div>
+                <span className="text-cyan-300">greeting: </span>
+                <span className="text-emerald-400">"{developerDetails.greeting}"</span>,
+              </div>
+              <div>
+                <span className="text-cyan-300">name: </span>
+                <span className="text-yellow-400 font-bold">"{developerDetails.name}"</span>,
+              </div>
+              <div>
+                <span className="text-cyan-300">role: </span>
+                <span className="text-purple-300">"{developerDetails.role}"</span>,
+              </div>
+              <div>
+                <span className="text-cyan-300">techStack: </span>
+                <span className="text-yellow-300">[</span>
+                <div className="pl-6 flex flex-wrap gap-2 my-1">
+                  {developerDetails.skills.map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="text-xs font-sans px-2.5 py-1 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30"
+                    >
+                      "{skill}"
+                    </span>
+                  ))}
                 </div>
-                {/* <div className='flex flex-col md:flex-row w-[80vw] lg:w-[80vw] sm:justify-center items-center mx-auto sm:h-auto h-[300px] justify-evenly '>
+                <span className="text-yellow-300">]</span>,
+              </div>
+              <div>
+                <span className="text-cyan-300">bio: </span>
+                <span className="text-gray-300">"{developerDetails.bio}"</span>
+              </div>
+            </div>
 
-                    <p className='text-4xl relative left-[-100px] opacity-30'>href="/</p>
-                    <div className="button1 sm:pr-3" >
-                        <Link to="/contact">
-                            <span className='bg-[#01041E] px-10 hover:bg-[#AD30FA] hover:text-[#FFF506] ease-in  duration-150 py-3 border-2 border-[#AD30FA] rounded-md'>{`<Get In Touch/>`}</span>
-                        </Link>
-                    </div>
-                    <div className="button2 sm:pl-3">
-                        <Link to="/contact">
-                            <span className='text-[#FFF506] hover:bg-[#01041E] hover:text-[#AD30FA] ease-in duration-150 bg-[#AD30FA] px-10 py-3 border-2 border-[#AD30FA] rounded-md'>{`<Get In Touch/>`}</span>
-                        </Link>
-                    </div>
-                    <p className='text-4xl relative right-[-100px] opacity-30'>"</p>
+            <div>
+              <span className="text-yellow-300">&#125;</span>;
+            </div>
+          </div>
 
-                </div> */}
-            </section>
-        </>
-    )
-}
+          {/* Action Buttons */}
+          <div className="mt-8 flex flex-wrap gap-4 pt-6 border-t border-white/10 font-sans">
+            <a
+              href="/projects"
+              className="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition-all duration-200 shadow-lg shadow-cyan-500/20"
+            >
+              Explore Projects
+            </a>
+            <a
+              href="/contact"
+              className="px-6 py-3 rounded-lg border border-purple-500/50 hover:border-purple-400 text-purple-300 hover:bg-purple-500/10 font-semibold transition-all duration-200"
+            >
+              Get In Touch
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
-export default HeroSection
+export default HeroSection;

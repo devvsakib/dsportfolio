@@ -2,138 +2,139 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 function ContactForm() {
-    const form = useRef();
-    const [msgStatus, setMsgStatus] = useState(false)
-    const [send, setSending] = useState(false)
-    const [formData, setFormData] = useState({
-        user_name: '',
-        user_email: '',
-        message: '',
-    });
-    const [formErrors, setFormErrors] = useState({
-        user_name: '',
-        user_email: '',
-        message: '',
-    });
-    const validateForm = () => {
-        let isValid = true;
-        const errors = {
-            user_name: '',
-            user_email: '',
-            message: '',
-        };
+  const form = useRef();
+  const [sending, setSending] = useState(false);
+  const [formData, setFormData] = useState({
+    user_name: '',
+    user_email: '',
+    message: '',
+  });
+  const [formErrors, setFormErrors] = useState({
+    user_name: '',
+    user_email: '',
+    message: '',
+  });
 
-        // Check the user name
-        if (!formData.user_name.trim()) {
-            errors.user_name = 'Full name is required';
-            isValid = false;
-        }
+  const validateForm = () => {
+    let isValid = true;
+    const errors = { user_name: '', user_email: '', message: '' };
 
-        // Check the email address
-        if (!formData.user_email.trim()) {
-            errors.user_email = 'Email address is required';
-            isValid = false;
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.user_email)) {
-            errors.user_email = 'Invalid email address';
-            isValid = false;
-        }
-
-        // Check the message
-        if (!formData.message.trim()) {
-            errors.message = 'Message is required';
-            isValid = false;
-        }
-
-        setFormErrors(errors);
-        return isValid;
-    };
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-        setSending(true)
-        if (validateForm()) {
-            emailjs.sendForm(
-                import.meta.env.VITE_APP_MSG_TOKEN1,
-                import.meta.env.VITE_APP_MSG_TOKEN2,
-                form.current,
-                import.meta.env.VITE_APP_MSG_TOKEN3
-            ).then((result) => {
-                if (result.status == 200) {
-                    setMsgStatus(true);
-                    setSending(false)
-                }
-                console.log(result);
-            }, (error) => {
-                console.log(error.text);
-                setMsgStatus(false);
-                setSending(false)
-            });
-        }
-        else {
-            setMsgStatus(!msgStatus);
-            notifyTimeout("❌ Please fill the form correctly!")
-            setSending(false)
-        }
-    };
-
-    if (msgStatus === true) {
-        document.getElementById("form").reset();
-        setTimeout(() => {
-            setMsgStatus(!msgStatus)
-        }, 2000);
+    if (!formData.user_name.trim()) {
+      errors.user_name = 'Full name is required';
+      isValid = false;
     }
-    const notifyTimeout = (msg) => {
-        toast(msg)
-        return <ToastContainer limit={1} autoClose={2000}
-            position="top-center"
-        />
-    };
+    if (!formData.user_email.trim()) {
+      errors.user_email = 'Email address is required';
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.user_email)) {
+      errors.user_email = 'Invalid email address';
+      isValid = false;
+    }
+    if (!formData.message.trim()) {
+      errors.message = 'Message is required';
+      isValid = false;
+    }
 
-    return (
-        <div className='mx-auto md:w-[60vw] lg:w-[50vw] text-center'>
+    setFormErrors(errors);
+    return isValid;
+  };
 
-            <div className='mt-5 mb-10'>
-                <h2 className='bg-gradient-to-r w-auto inline from-[#AD30FA] to-[#07C5D1] font-semibold uppercase bg-clip-text text-transparent text-3xl'>Get In Touch</h2>
-            </div>
-            <div className='mt-5'>
-                <form ref={form} id="form"
-                    className='flex flex-col gap-4' >
-                    <input
-                        className={`outline-none rounded px-4 py-2 font-normal bg-gradient-to-l from-[#AD30FA]/30 to-[#07C5D1]/30 backdrop-blur-[10rem] bg-black/40 ${formErrors.user_name ? 'border-red-500' : ''
-                            }`}
-                        type="text"
-                        name="user_name"
-                        value={formData.user_name}
-                        placeholder="Enter your Full Name"
-                        onChange={(e) => {
-                            setFormData({ ...formData, user_name: e.target.value });
-                        }}
-                        required
-                    />
-                    <input className='outline-none rounded px-4 py-2 font-normal bg-gradient-to-l from-[#AD30FA]/30 to-[#07C5D1]/30 backdrop-blur-[10rem] bg-black/40' type="email" name="user_email" placeholder='Enter your Email'
-                        value={formData.user_email}
-                        onChange={(e) => {
-                            setFormData({ ...formData, user_email: e.target.value });
-                        }}
-                        required />
-                    <textarea className='outline-none rounded px-4 py-2 font-normal bg-gradient-to-l from-[#AD30FA]/30 to-[#07C5D1]/30 backdrop-blur-[10rem] bg-black/40 resize-none' rows={5} cols={20} name="message" placeholder='Message'
-                        value={formData.message}
-                        onChange={(e) => {
-                            setFormData({ ...formData, message: e.target.value });
-                        }}
-                        required />
-                    {
-                        !send ?
-                            <button onClick={sendEmail} type="submit" className='bg-gradient-to-r w-auto inline from-[#AD30FA] to-[#07C5D1] text-white py-3 uppercase  rounded hover:from-[#07C5D1] hover:to-[#AD30FA] hover:transition ease-in-out hover:translate-y-3 duration-500 delay-100' >Send</button> : <button type="submit" className='bg-gradient-to-r w-auto inline from-[#AD30FA] to-[#07C5D1] text-white py-3 uppercase  rounded hover:from-[#07C5D1] hover:to-[#AD30FA] hover:transition ease-in-out hover:translate-y-3 duration-500 delay-100 cursor-wait' disabled>Sending</button>
-                    }
-                </form>
-                {
-                    msgStatus && notifyTimeout("✅ Message Sent Successfully!")
-                }
-            </div>
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (!validateForm()) {
+      toast.error("Please fill the form correctly!");
+      return;
+    }
+
+    setSending(true);
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_APP_MSG_TOKEN1,
+        import.meta.env.VITE_APP_MSG_TOKEN2,
+        form.current,
+        import.meta.env.VITE_APP_MSG_TOKEN3
+      )
+      .then(
+        (result) => {
+          if (result.status === 200) {
+            toast.success("Message Sent Successfully!");
+            setFormData({ user_name: '', user_email: '', message: '' });
+          }
+          setSending(false);
+        },
+        (error) => {
+          console.error(error.text);
+          toast.error("Failed to send message. Please try again.");
+          setSending(false);
+        }
+      );
+  };
+
+  return (
+    <div className="mx-auto w-full md:w-[60vw] lg:w-[50vw] text-center px-4">
+      <ToastContainer limit={1} autoClose={2000} position="top-center" />
+      
+      <div className="mt-5 mb-10">
+        <h2 className="bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent font-bold uppercase text-3xl md:text-4xl">
+          Get In Touch
+        </h2>
+      </div>
+
+      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
+        <div>
+          <input
+            className={`w-full outline-none rounded-lg px-4 py-3 font-normal text-white bg-white/10 backdrop-blur-md border ${
+              formErrors.user_name ? 'border-red-500' : 'border-white/10 focus:border-cyan-400'
+            } transition-colors placeholder-gray-400`}
+            type="text"
+            name="user_name"
+            value={formData.user_name}
+            placeholder="Enter your Full Name"
+            onChange={(e) => setFormData({ ...formData, user_name: e.target.value })}
+          />
+          {formErrors.user_name && <p className="text-red-400 text-xs text-left mt-1 pl-1">{formErrors.user_name}</p>}
         </div>
-    )
+
+        <div>
+          <input
+            className={`w-full outline-none rounded-lg px-4 py-3 font-normal text-white bg-white/10 backdrop-blur-md border ${
+              formErrors.user_email ? 'border-red-500' : 'border-white/10 focus:border-cyan-400'
+            } transition-colors placeholder-gray-400`}
+            type="email"
+            name="user_email"
+            placeholder="Enter your Email"
+            value={formData.user_email}
+            onChange={(e) => setFormData({ ...formData, user_email: e.target.value })}
+          />
+          {formErrors.user_email && <p className="text-red-400 text-xs text-left mt-1 pl-1">{formErrors.user_email}</p>}
+        </div>
+
+        <div>
+          <textarea
+            className={`w-full outline-none rounded-lg px-4 py-3 font-normal text-white bg-white/10 backdrop-blur-md border ${
+              formErrors.message ? 'border-red-500' : 'border-white/10 focus:border-cyan-400'
+            } transition-colors placeholder-gray-400 resize-none`}
+            rows={5}
+            name="message"
+            placeholder="Message"
+            value={formData.message}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          />
+          {formErrors.message && <p className="text-red-400 text-xs text-left mt-1 pl-1">{formErrors.message}</p>}
+        </div>
+
+        <button
+          type="submit"
+          disabled={sending}
+          className="w-full bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-cyan-500 hover:to-purple-600 text-white font-semibold py-3 uppercase rounded-lg shadow-lg shadow-purple-500/20 hover:shadow-cyan-500/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {sending ? "Sending..." : "Send Message"}
+        </button>
+      </form>
+    </div>
+  );
 }
 
-export default ContactForm
+export default ContactForm;

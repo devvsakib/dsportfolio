@@ -1,14 +1,11 @@
-import React from 'react'
-import HeroSection from '../components/Herosection/HearoSection'
-import Notice from '../components/Notice/Notice'
+import HeroSection from '../components/Herosection/HearoSection';
 
 const Home = () => {
-    return (
-        <div className='md:h-[70vh] sm:h-auto flex items-center'>
-            {/* <Notice /> */}
-            <HeroSection />
-        </div>
-    )
-}
+  return (
+    <div className="min-h-[80vh] flex items-center justify-center py-10 relative">
+      <HeroSection />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
